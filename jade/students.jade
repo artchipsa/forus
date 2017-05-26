@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+html(lang="ru")
+head
+	meta(charset="UTF-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+	title Forus
+	link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800" rel="stylesheet")
+	link(rel="stylesheet", href="css/bootstrap.min.css")
+	link(rel="stylesheet", href="css/bootstrap-theme.min.css")
+	link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css")
+	link(rel="stylesheet", href="css/owl.carousel.min.css")
+	link(rel="stylesheet", href="css/owl.theme.default.css")
+	link(rel="stylesheet", href="css/style.css")
+body
+	include modules/header.jade
+	
+	.hero-block(style="background-image: url(img/prof_hero.jpg)")
+		.gradient-overlay
+		.hero-bottom-text
+			ol.breadcrumb
+				li
+					a(href="#") Главная
+				li.active
+					h1 Вакансии
+			ul.nav.nav-tabs.vacancy-switch(role="tablist")
+				li.active(role="presentation")
+					a(href="#students" aria-controls="students" role="tabs" data-toggle="tab") Студентам
+				li(role="presentation")
+					a(href="#proffs" aria-controls="proffs" role="tabs" data-toggle="tab") Профессионалам
+	.container-fluid
+		.tab-content
+			.tab-pane.fade.in.active#students
+				.reason-block
+					.row
+						.col-lg-2.col-md-4.col-sm-4.col-xs-12.item.vcenter
+							h2.title Причины стать частью «Форуса»
+						.col-lg-2.col-md-4.col-sm-4.col-xs-12.item.vcenter
+							.reason-card
+								.content.front
+									img(src="img/val6.svg", alt="")
+									span Старт в карьере
+								.back
+									span У тебя нет опыта работы? Мы поможем тебе получить знания, опыт и официальный стаж работы.
+						.col-lg-2.col-md-4.col-sm-4.col-xs-12.item.vcenter
+							.reason-card
+								.content.front
+									img(src="img/val7.svg", alt="")
+									span Учеба + работа
+								.back
+									span Совмещай обучение и работу. С гибким графиком у тебя получится!
+						.col-lg-2.col-md-4.col-sm-4.col-xs-12.item.vcenter
+							.reason-card
+								.content.front
+									img(src="img/val8.svg", alt="")
+									span Сплоченный коллектив
+								.back
+									span Мы молоды, дружелюбны, амбициозны, с радостью поможем тебе пройти стажировку и стать
+						.col-lg-2.col-md-4.col-sm-4.col-xs-12.item.vcenter
+							.reason-card
+								.content.front
+									img(src="img/val9.svg", alt="")
+									span Надежная компания
+								.back
+									span Мы работаем с 1992 года, в штате уже более 350 сотрудников в 18 городах России и Монголии.
+						.col-lg-2.col-md-4.col-sm-4.col-xs-12.item.vcenter
+							.reason-card
+								.content.front
+									img(src="img/val5.svg", alt="")
+									span Офисы в центре города
+								.back
+									span И в каждом из них комфортное рабочее место.
+				.vacancy-block
+					h2.title Вакансии
+					ul.nav.nav-tabs.vacancy-city-switch(role="tablist")
+						li.active(role="presentation")
+							a(href="#proffIrkutsk" aria-controls="proffIrkutsk" role="tabs" data-toggle="tab") Иркутск
+						li(role="presentation")
+							a(href="#proffEburg" aria-controls="proffEburg" role="tabs" data-toggle="tab") Екатеринбург
+					.tab-content
+						.tab-pane.fade.in.active#proffIrkutsk
+							.row.vacancy-items
+								.col-lg-3.col-md-6.col-sm-6.col-xs-6.item-container
+									a(href="").item
+										span Информационные<br> технологии
+								.col-lg-3.col-md-6.col-sm-6.col-xs-6.item-container
+									a(href="").item
+										span Продажи и работа<br> с клиентами
+								.col-lg-3.col-md-6.col-sm-6.col-xs-6.item-container
+									a(href="").item
+										span Бухгалтерия
+								.col-lg-3.col-md-6.col-sm-6.col-xs-6.item-container
+									a(href="").item
+										span Реклама <br>и маркетинг
+							.vacancy-city-content
+								.section
+									.row
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на первичные документы
+													a(href="#" data-toggle="modal" data-target=".vacancy") Подробнее
+											.modal.fade.vacancy(tabindex="-1" role="dialog")
+												.modal-dialog(role="document")
+													.modal-content
+														include modules/vacancy-modal.jade
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.img-block
+													.gradient-overlay
+													img(src="img/v1.jpg", alt="")
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на самостоятельный баланс 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Специалист по  интернет-продвижению 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Системный аналитик
+													a(href="#") Подробнее
+								.section
+									.row
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на первичные документы
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.img-block
+													.gradient-overlay
+													img(src="img/v1.jpg", alt="")
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на самостоятельный баланс 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Специалист по  интернет-продвижению 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Системный аналитик
+													a(href="#") Подробнее
+								.section
+									.row
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на первичные документы
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.img-block
+													.gradient-overlay
+													img(src="img/v1.jpg", alt="")
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на самостоятельный баланс 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Специалист по  интернет-продвижению 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Системный аналитик
+													a(href="#") Подробнее
+								.section
+									.row
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на первичные документы
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.img-block
+													.gradient-overlay
+													img(src="img/v1.jpg", alt="")
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на самостоятельный баланс 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Специалист по  интернет-продвижению 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Системный аналитик
+													a(href="#") Подробнее
+						.tab-pane.fade#proffEburg
+							.row.vacancy-items
+								.col-lg-3.col-md-6.col-sm-6.col-xs-6.item-container
+									a(href="").item
+										span Информационные<br> технологии
+								.col-lg-3.col-md-6.col-sm-6.col-xs-6.item-container
+									a(href="").item
+										span Продажи и работа<br> с клиентами
+								.col-lg-3.col-md-6.col-sm-6.col-xs-6.item-container
+									a(href="").item
+										span Бухгалтерия
+								.col-lg-3.col-md-6.col-sm-6.col-xs-6.item-container
+									a(href="").item
+										span Реклама <br>и маркетинг
+							.vacancy-city-content
+								.section
+									.row
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на первичные документы
+													a(href="#" data-toggle="modal" data-target=".vacancy") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.img-block
+													.gradient-overlay
+													img(src="img/v1.jpg", alt="")
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на самостоятельный баланс 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Специалист по  интернет-продвижению 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Системный аналитик
+													a(href="#") Подробнее
+								.section
+									.row
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на первичные документы
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.img-block
+													.gradient-overlay
+													img(src="img/v1.jpg", alt="")
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на самостоятельный баланс 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Специалист по  интернет-продвижению 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Системный аналитик
+													a(href="#") Подробнее
+								.section
+									.row
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на первичные документы
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.img-block
+													.gradient-overlay
+													img(src="img/v1.jpg", alt="")
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на самостоятельный баланс 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Специалист по  интернет-продвижению 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Системный аналитик
+													a(href="#") Подробнее
+								.section
+									.row
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на первичные документы
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.img-block
+													.gradient-overlay
+													img(src="img/v1.jpg", alt="")
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на самостоятельный баланс 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Специалист по  интернет-продвижению 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Системный аналитик
+													a(href="#") Подробнее
+					.vacancy-info-block
+						.row
+							.col-lg-6.col-md-6.col-sm-12.col-xs-12.col
+								.item
+									.row
+										.col-lg-6.col-sm-6.col-xs-12
+											.img-block
+												.gradient-overlay
+												img(src="img/vi1.jpg", alt="")
+										.col-lg-6.col-sm-6.col-xs-12
+											.content
+												h3.subtitle Карьера
+												.line
+												p Узнай, какие возможности мы предлагаем трудолюбивым и целеустремленным сотрудникам
+							.col-lg-6.col-md-6.col-sm-12.col-xs-12.col
+								.item
+									.row
+										.col-lg-6.col-sm-6.col-xs-12
+											.img-block
+												.gradient-overlay
+												img(src="img/vi2.jpg", alt="")
+										.col-lg-6.col-sm-6.col-xs-12
+											.content
+												h3.subtitle Стажировка и адаптация
+												.line
+												ul
+													li 3 месяца обучения
+													li Адаптационная программа
+													li Наставник
+													li 350 коллег в группе поддержки	 
+					.students-email
+						.row
+							.col-lg-8
+								.collage-block
+									h2.subtitle Эти ВУЗы доверяют нам своих студентов
+									.row.collages
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12.collage
+											img(src="img/col1.jpg", alt="")
+											.name Иркутский национальный исследовательский технический университет
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12.collage
+											img(src="img/col2.jpg", alt="")
+											.name Иркутский государственный университет путей сообщения
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12.collage
+											img(src="img/col3.jpg", alt="")
+											.name Иркутский Государственный Университет
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12.collage
+											img(src="img/col4.jpg", alt="")
+											.name Байкальский Государственный Университет
+							.col-lg-4
+								.vacancy-email
+									form(action="")
+										.form-group
+											h2 Подписаться<br>на рассылку вакансий
+										.form-group
+											select.select2(name="" placeholder="Все вакансии")
+												option(value="0") Все вакансии
+												option(value="1") Бухгалтерия
+												option(value="2") IT
+										.form-group
+											input(type="email", name="", placeholder="Электронная почта")
+										.form-group
+											input(type="submit", value="подписаться")
+				.news-block
+					.row
+						.col-lg-8
+							.news-header
+								h2.title Новости Форуса
+								.arrow-container
+									a(href="#").prev
+										img(src="img/arrow_left.svg", alt="")
+									a(href="#").next
+										img(src="img/arrow_right.svg", alt="")
+							.news-container.owl-carousel
+								.item
+									.row
+										.col-lg-6.col-md-6.col-sm-12.col-xs-12.half
+											a(href="").new.big
+												.img-block(style="background-image: url(img/new1.jpg)")
+													.gradient-overlay
+												.date 12 сентября
+												.name 26 октября Конференция "День управления документами и процессами"
+										.col-lg-6.col-md-6.col-sm-12.col-xs-12
+											.row
+												.col-lg-12
+													a(href="").new.middle
+														.img-block(style="background-image: url(img/new2.jpg)")
+															.gradient-overlay
+														.date 3 сентября
+														.name Профессия бухгалтер: Говорим о главных тенденциях
+												.col-lg-6.col-md-6.col-sm-6.col-xs-12
+													a(href="").new.small
+														.img-block(style="background-image: url(img/new3.jpg)")
+															.gradient-overlay
+														.date 27 декабря
+														.name Атмосфера мероприятия была просто прекрасной
+												.col-lg-6.col-md-6.col-sm-6.col-xs-12
+													a(href="").new.small.all
+														.img-block(style="background-image: url(img/new3.jpg)")
+															.gradient-overlay
+														.date 
+														.name Смотреть все новости
+								.item
+									.row
+										.col-lg-6.col-md-6.col-sm-12.col-xs-12.half
+											a(href="").new.big
+												.img-block(style="background-image: url(img/new1.jpg)")
+													.gradient-overlay
+												.date 12 сентября
+												.name 26 октября Конференция "День управления документами и процессами"
+										.col-lg-6.col-md-6.col-sm-12.col-xs-12
+											.row
+												.col-lg-12
+													a(href="").new.middle
+														.img-block(style="background-image: url(img/new2.jpg)")
+															.gradient-overlay
+														.date 3 сентября
+														.name Профессия бухгалтер: Говорим о главных тенденциях
+												.col-lg-6.col-md-6.col-sm-6.col-xs-12
+													a(href="").new.small
+														.img-block(style="background-image: url(img/new3.jpg)")
+															.gradient-overlay
+														.date 27 декабря
+														.name Атмосфера мероприятия была просто прекрасной
+												.col-lg-6.col-md-6.col-sm-6.col-xs-12
+													a(href="").new.small.all
+														.img-block(style="background-image: url(img/new3.jpg)")
+															.gradient-overlay
+														.date 
+														.name Смотреть все новости
+						.col-lg-4
+							.moments-header
+								h2.title Моменты из жизни
+								.arrow-container
+									a(href="#").prev
+										img(src="img/arrow_left.svg", alt="")
+									a(href="#").next
+										img(src="img/arrow_right.svg", alt="")
+							.moments-container.owl-carousel
+								.item
+									.moment.half
+										.img-block(style="background-image: url(img/moment1.jpg)")
+											.gradient-overlay
+								.item
+									.moment.half
+										.img-block(style="background-image: url(img/moment1.jpg)")
+											.gradient-overlay
+			.tab-pane.fade#proffs
+				.reason-block
+					.row
+						.col-lg-2.col-md-4.col-sm-4.col-xs-12.item.vcenter
+							h2.title Причины стать частью «Форуса»
+						.col-lg-2.col-md-4.col-sm-4.col-xs-12.item.vcenter
+							.reason-card
+								.content.front
+									img(src="img/val1.svg", alt="")
+									span Больше, чем работа
+								.back
+									span Участие в интересных проектах и решение нестандартных задач, то, чем мы занимаемся ежедневно и с удовольствием!
+						.col-lg-2.col-md-4.col-sm-4.col-xs-12.item.vcenter
+							.reason-card
+								.content.front
+									img(src="img/val2.svg", alt="")
+									span Инновационная IT-компания
+								.back
+									span Мы в курсе последних тенденций и разработок в IT, и часть из них создаем сами!
+						.col-lg-2.col-md-4.col-sm-4.col-xs-12.item.vcenter
+							.reason-card
+								.content.front
+									img(src="img/val3.svg", alt="")
+									span Сообщество профессионалов
+								.back
+									span Мы амбициозны, любим делиться знаниями и опытом, нацелены на успех и работаем на перспективу.
+						.col-lg-2.col-md-4.col-sm-4.col-xs-12.item.vcenter
+							.reason-card
+								.content.front
+									img(src="img/val4.svg", alt="")
+									span Надежная компания
+								.back
+									span Мы работаем с 1992 года, в штате уже более 350 сотрудников в 18 городах России и Монголии.
+						.col-lg-2.col-md-4.col-sm-4.col-xs-12.item.vcenter
+							.reason-card
+								.content.front
+									img(src="img/val5.svg", alt="")
+									span Офисы в центре города
+								.back
+									span И в каждом из них комфортное рабочее место.
+				.vacancy-block
+					h2.title Вакансии
+					ul.nav.nav-tabs.vacancy-city-switch(role="tablist")
+						li.active(role="presentation")
+							a(href="#Irkutsk" aria-controls="Irkutsk" role="tabs" data-toggle="tab") Иркутск
+						li(role="presentation")
+							a(href="#Eburg" aria-controls="Eburg" role="tabs" data-toggle="tab") Екатеринбург
+					.tab-content
+						.tab-pane.fade.in.active#Irkutsk
+							.row.vacancy-items
+								.col-lg-3.col-md-6.col-sm-6.col-xs-6.item-container
+									a(href="").item
+										span Информационные<br> технологии
+								.col-lg-3.col-md-6.col-sm-6.col-xs-6.item-container
+									a(href="").item
+										span Продажи и работа<br> с клиентами
+								.col-lg-3.col-md-6.col-sm-6.col-xs-6.item-container
+									a(href="").item
+										span Бухгалтерия
+								.col-lg-3.col-md-6.col-sm-6.col-xs-6.item-container
+									a(href="").item
+										span Реклама <br>и маркетинг
+							.vacancy-city-content
+								.section
+									.row
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на первичные документы
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.img-block
+													.gradient-overlay
+													img(src="img/v1.jpg", alt="")
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на самостоятельный баланс 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Специалист по  интернет-продвижению 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Системный аналитик
+													a(href="#") Подробнее
+								.section
+									.row
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на первичные документы
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.img-block
+													.gradient-overlay
+													img(src="img/v1.jpg", alt="")
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на самостоятельный баланс 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Специалист по  интернет-продвижению 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Системный аналитик
+													a(href="#") Подробнее
+								.section
+									.row
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на первичные документы
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.img-block
+													.gradient-overlay
+													img(src="img/v1.jpg", alt="")
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на самостоятельный баланс 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Специалист по  интернет-продвижению 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Системный аналитик
+													a(href="#") Подробнее
+								.section
+									.row
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на первичные документы
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.img-block
+													.gradient-overlay
+													img(src="img/v1.jpg", alt="")
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на самостоятельный баланс 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Специалист по  интернет-продвижению 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Системный аналитик
+													a(href="#") Подробнее
+						.tab-pane.fade#Eburg
+							.row.vacancy-items
+								.col-lg-3.col-md-6.col-sm-6.col-xs-6.item-container
+									a(href="").item
+										span Информационные<br> технологии
+								.col-lg-3.col-md-6.col-sm-6.col-xs-6.item-container
+									a(href="").item
+										span Продажи и работа<br> с клиентами
+								.col-lg-3.col-md-6.col-sm-6.col-xs-6.item-container
+									a(href="").item
+										span Бухгалтерия
+								.col-lg-3.col-md-6.col-sm-6.col-xs-6.item-container
+									a(href="").item
+										span Реклама <br>и маркетинг
+							.vacancy-city-content
+								.section
+									.row
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на первичные документы
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.img-block
+													.gradient-overlay
+													img(src="img/v1.jpg", alt="")
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на самостоятельный баланс 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Специалист по  интернет-продвижению 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Системный аналитик
+													a(href="#") Подробнее
+								.section
+									.row
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на первичные документы
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.img-block
+													.gradient-overlay
+													img(src="img/v1.jpg", alt="")
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на самостоятельный баланс 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Специалист по  интернет-продвижению 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Системный аналитик
+													a(href="#") Подробнее
+								.section
+									.row
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на первичные документы
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.img-block
+													.gradient-overlay
+													img(src="img/v1.jpg", alt="")
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на самостоятельный баланс 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Специалист по  интернет-продвижению 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Системный аналитик
+													a(href="#") Подробнее
+								.section
+									.row
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на первичные документы
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.img-block
+													.gradient-overlay
+													img(src="img/v1.jpg", alt="")
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Бухгалтер на самостоятельный баланс 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Специалист по  интернет-продвижению 
+													a(href="#") Подробнее
+										.col-lg-3.col-md-6.col-sm-6.col-xs-12
+											.vacancy-item
+												.tag Центр аутсорсинга бухгалтерских услуг
+												.name
+													span Системный аналитик
+													a(href="#") Подробнее
+					.vacancy-info-block
+						.row
+							.col-lg-6.col-md-6.col-sm-12.col-xs-12.col
+								.item
+									.row
+										.col-lg-6.col-sm-6.col-xs-12
+											.img-block
+												.gradient-overlay
+												img(src="img/vi1.jpg", alt="")
+										.col-lg-6.col-sm-6.col-xs-12
+											.content
+												h3.subtitle Карьера
+												.line
+												p Узнай, какие возможности мы предлагаем трудолюбивым и целеустремленным сотрудникам
+							.col-lg-6.col-md-6.col-sm-12.col-xs-12.col
+								.item
+									.row
+										.col-lg-6.col-sm-6.col-xs-12
+											.img-block
+												.gradient-overlay
+												img(src="img/vi2.jpg", alt="")
+										.col-lg-6.col-sm-6.col-xs-12
+											.content
+												h3.subtitle Стажировка и адаптация
+												.line
+												ul
+													li 3 месяца обучения
+													li Адаптационная программа
+													li Наставник
+													li 350 коллег в группе поддержки	 
+					.vacancy-email
+						form.form-inline(action="")
+							.form-group
+								h2 Подписаться<br>на рассылку вакансий
+							.form-group
+								select.select2(name="" placeholder="Все вакансии")
+									option(value="0") Все вакансии
+									option(value="1") Бухгалтерия
+									option(value="2") IT
+							.form-group
+								input(type="email", name="", placeholder="Электронная почта")
+							.form-group
+								input(type="submit", value="подписаться")
+				.news-block
+					.row
+						.col-lg-8
+							.news-header
+								h2.title Новости Форуса
+								.arrow-container
+									a(href="#").prev
+										img(src="img/arrow_left.svg", alt="")
+									a(href="#").next
+										img(src="img/arrow_right.svg", alt="")
+							.news-container.owl-carousel
+								.item
+									.row
+										.col-lg-6.col-md-6.col-sm-12.col-xs-12.half
+											a(href="").new.big
+												.img-block(style="background-image: url(img/new1.jpg)")
+													.gradient-overlay
+												.date 12 сентября
+												.name 26 октября Конференция "День управления документами и процессами"
+										.col-lg-6.col-md-6.col-sm-12.col-xs-12
+											.row
+												.col-lg-12
+													a(href="").new.middle
+														.img-block(style="background-image: url(img/new2.jpg)")
+															.gradient-overlay
+														.date 3 сентября
+														.name Профессия бухгалтер: Говорим о главных тенденциях
+												.col-lg-6.col-md-6.col-sm-6.col-xs-12
+													a(href="").new.small
+														.img-block(style="background-image: url(img/new3.jpg)")
+															.gradient-overlay
+														.date 27 декабря
+														.name Атмосфера мероприятия была просто прекрасной
+												.col-lg-6.col-md-6.col-sm-6.col-xs-12
+													a(href="").new.small.all
+														.img-block(style="background-image: url(img/new3.jpg)")
+															.gradient-overlay
+														.date 
+														.name Смотреть все новости
+								.item
+									.row
+										.col-lg-6.col-md-6.col-sm-12.col-xs-12.half
+											a(href="").new.big
+												.img-block(style="background-image: url(img/new1.jpg)")
+													.gradient-overlay
+												.date 12 сентября
+												.name 26 октября Конференция "День управления документами и процессами"
+										.col-lg-6.col-md-6.col-sm-12.col-xs-12
+											.row
+												.col-lg-12
+													a(href="").new.middle
+														.img-block(style="background-image: url(img/new2.jpg)")
+															.gradient-overlay
+														.date 3 сентября
+														.name Профессия бухгалтер: Говорим о главных тенденциях
+												.col-lg-6.col-md-6.col-sm-6.col-xs-12
+													a(href="").new.small
+														.img-block(style="background-image: url(img/new3.jpg)")
+															.gradient-overlay
+														.date 27 декабря
+														.name Атмосфера мероприятия была просто прекрасной
+												.col-lg-6.col-md-6.col-sm-6.col-xs-12
+													a(href="").new.small.all
+														.img-block(style="background-image: url(img/new3.jpg)")
+															.gradient-overlay
+														.date 
+														.name Смотреть все новости
+						.col-lg-4
+							.moments-header
+								h2.title Моменты из жизни
+								.arrow-container
+									a(href="#").prev
+										img(src="img/arrow_left.svg", alt="")
+									a(href="#").next
+										img(src="img/arrow_right.svg", alt="")
+							.moments-container.owl-carousel
+								.item
+									.moment.half
+										.img-block(style="background-image: url(img/moment1.jpg)")
+											.gradient-overlay
+								.item
+									.moment.half
+										.img-block(style="background-image: url(img/moment1.jpg)")
+											.gradient-overlay
+	
+	include modules/footer.jade
+
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js")
+	script(src="js/owl.carousel.min.js")
+	script(src="js/bootstrap.min.js")
+	script(src="js/app.js")
+
+	

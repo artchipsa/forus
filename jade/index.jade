@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+html(lang="ru")
+head
+	meta(charset="UTF-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+	title Forus
+	link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800" rel="stylesheet")
+	link(rel="stylesheet", href="css/bootstrap.min.css")
+	link(rel="stylesheet", href="css/bootstrap-theme.min.css")
+	link(rel="stylesheet", href="css/style.css")
+body
+	include modules/header.jade
+	.menu-modal.modal-window
+		ul
+			li
+				a(href="#") Главная
+				.line
+			li
+				a(href="#") Работа в компании
+				.line
+			li
+				a(href="#") Сотрудникам
+				.line
+			li
+				a(href="#") Жизнь компании
+				.line
+			li
+				a(href="#") Обучение и развитие
+				.line
+			li
+				a(href="#") Контакты
+				.line
+			li
+				a(href="#") О Форусе
+	.way-blocks-wrapper
+		a.item(href="")
+			.img-block(style="background-image: url(img/m1.jpg)")
+			.gradient-overlay.left
+			.text-block
+				span Вакансии
+				h2 Студентам
+				.more подробнее
+		a.item(href="")
+			.img-block(style="background-image: url(img/m2.jpg)")
+			.gradient-overlay.middle
+			.text-block
+				span Вакансии
+				h2 профессионалам
+				.more подробнее
+		a.item(href="")
+			.img-block(style="background-image: url(img/m3.jpg)")
+			.gradient-overlay.right
+			.text-block
+				span Информация
+				h2 Сотрудникам
+				.more подробнее
+	.main-vacancy
+		.item
+			.title
+				img(src="img/fresh.svg", alt="")
+				h2 Свежие вакансии
+		a(href="").item
+			.content
+				img(src="img/mv1.jpg", alt="")
+				.text
+					.tag Контакт-Центр
+					.name Системный инженер
+		a(href="").item
+			.content
+				img(src="img/mv2.jpg", alt="")
+				.text
+					.tag Профессионалам
+					.name Специалист по интернет–продвижению
+		a(href="").item
+			.content
+				img(src="img/mv3.jpg", alt="")
+				.text
+					.tag Студентам
+					.name Консультант технической поддержки 
+
+
+
+
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+	script(src="js/bootstrap.min.js")
+	script(src="js/app.js")
+
+	
