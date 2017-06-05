@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+html(lang="ru")
+head
+	meta(charset="UTF-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+	title Forus
+	link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800" rel="stylesheet")
+	link(rel="stylesheet", href="css/bootstrap.min.css")
+	link(rel="stylesheet", href="css/bootstrap-theme.min.css")
+	link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css")
+	link(rel="stylesheet", href="css/owl.carousel.min.css")
+	link(rel="stylesheet", href="css/owl.theme.default.css")
+	link(rel="stylesheet", href="css/style.css")
+body
+	header.white
+		.container-fluid
+			.row
+				.col-lg-4.col-md-4.col-sm-4.vcenter.phone
+					a(href="tel:+7 (3952) 25–87–33") +7 (3952) #[span 25–87–33] 
+				.col-lg-4.col-md-4.col-sm-4.vcenter.logo
+					img(src="img/logo_white.svg", alt="")
+					img(src="img/color_logo.svg").onWhite				
+				.col-lg-4.col-md-4.col-sm-4.col-xs-.vcenter.menu
+					a(href="#")
+						p Меню
+						.burger
+							span
+	.hero-block.text-page.no-img.contacts
+		.hero-bottom-text
+			ol.breadcrumb
+				li
+					a(href="#") Главная
+				li.active
+					h1 Контакты
+	.container-fluid
+		.small-container
+			.contacts
+				.row
+					.col-lg-4.col-md-4.col-sm-12.col-xs-12
+						.item
+							img(src="img/contacts1.svg", alt="")
+							span Адрес:
+							.line
+							p 664007, Иркутская обл., Иркутск, ул. Александра Невского, 2
+					.col-lg-4.col-md-4.col-sm-12.col-xs-12
+						.item
+							img(src="img/contacts2.svg", alt="")
+							span Соискателям
+							.line
+							p + 7 (3952) 25-87-33 #[a(href="") personal@forus.ru]
+					.col-lg-4.col-md-4.col-sm-12.col-xs-12
+						.item
+							img(src="img/contacts3.svg", alt="")
+							span Подбор IT-специалистов
+							.line
+							p + 7 (3952) 78-10-10 #[a(href="") voks@forus.ru]
+		#map
+
+
+	include modules/footer.jade
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js")
+	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAE8iqwKY6PeKvryHYgM_k7cbH9ZyKk5g")
+	script(src="js/owl.carousel.min.js")
+	script(src="js/bootstrap.min.js")
+	script(src="js/app.js")

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+head
+	meta(charset="UTF-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+	title Forus
+	link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800" rel="stylesheet")
+	link(rel="stylesheet", href="css/bootstrap.min.css")
+	link(rel="stylesheet", href="css/bootstrap-theme.min.css")
+	link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css")
+	link(rel="stylesheet", href="css/owl.carousel.min.css")
+	link(rel="stylesheet", href="css/owl.theme.default.css")
+	link(rel="stylesheet", href="css/style.css")
+body
+	header.white
+		.container-fluid
+			.row
+				.col-lg-4.col-md-4.col-sm-4.vcenter.phone
+					a(href="tel:+7 (3952) 25–87–33") +7 (3952) #[span 25–87–33] 
+				.col-lg-4.col-md-4.col-sm-4.vcenter.logo
+					img(src="img/logo_white.svg", alt="")
+					img(src="img/color_logo.svg").onWhite				
+				.col-lg-4.col-md-4.col-sm-4.col-xs-.vcenter.menu
+					a(href="#")
+						p Меню
+						.burger
+							span
+	.hero-block.text-page.contacts.no-img
+		.hero-bottom-text
+			ol.breadcrumb
+				li
+					a(href="#") Главная
+				li.active
+					h1 Обучение и развитие
+	.container-fluid
+		.news-block.proffs.growth
+			.news-container
+				.item
+					.row
+						.col-lg-6.col-md-6.col-sm-12.col-xs-12.half
+							a(href="").new.big
+								.img-block(style="background-image: url(img/new3.jpg)")
+									.gradient-overlay
+								.date 
+								.name Корпоративный университет
+						.col-lg-6.col-md-6.col-sm-12.col-xs-12.half
+							a(href="").new.big
+								.img-block(style="background-image: url(img/new2.jpg)")
+									.gradient-overlay
+								.date 
+								.name Учеьные программы
+						.col-lg-12.col-md-12.col-sm-12.col-xs-12.half
+							a(href="").new.big
+								.img-block(style="background-image: url(img/new1_big.jpg)")
+									.gradient-overlay
+								.date 
+								.name Курс молодого бойца
+	include modules/footer.jade
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js")
+	script(src="js/owl.carousel.min.js")
+	script(src="js/bootstrap.min.js")
+	script(src="js/app.js")

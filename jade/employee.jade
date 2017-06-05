@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+html(lang="ru")
+head
+	meta(charset="UTF-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+	title Forus
+	link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800" rel="stylesheet")
+	link(rel="stylesheet", href="css/bootstrap.min.css")
+	link(rel="stylesheet", href="css/bootstrap-theme.min.css")
+	link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css")
+	link(rel="stylesheet", href="css/owl.carousel.min.css")
+	link(rel="stylesheet", href="css/owl.theme.default.css")
+	link(rel="stylesheet", href="css/style.css")
+body
+	include modules/header.jade
+
+	.hero-block
+		.img-block.students(style="background-image: url(img/employee.jpg)")
+			.gradient-overlay
+		.hero-bottom-text
+			ol.breadcrumb
+				li
+					a(href="#") Главная
+				li.active
+					h1 Сотрудникам
+	.container-fluid
+		.reason-block
+			.row
+				.col-lg-2.col-md-4.col-sm-4.col-xs-12.item.vcenter
+					h2.title Ценности компании
+					span Это не просто слова, а цепь соединяющая нас и позволяющая год от года быть лидерами в своей сфере
+				.col-lg-2.col-md-4.col-sm-4.col-xs-12.item.vcenter
+					.reason-card
+						.content.front
+							img(src="img/emp_v1.svg", alt="")
+							span Партнёрство
+						.back
+							span У тебя нет опыта работы? Мы поможем тебе получить знания, опыт и официальный стаж работы.
+				.col-lg-2.col-md-4.col-sm-4.col-xs-12.item.vcenter
+					.reason-card
+						.content.front
+							img(src="img/emp_v2.svg", alt="")
+							span Профессионализм
+						.back
+							span Совмещай обучение и работу. С гибким графиком у тебя получится!
+				.col-lg-2.col-md-4.col-sm-4.col-xs-12.item.vcenter
+					.reason-card
+						.content.front
+							img(src="img/emp_v3.svg", alt="")
+							span Инновации
+						.back
+							span Мы молоды, дружелюбны, амбициозны, с радостью поможем тебе пройти стажировку и стать
+				.col-lg-2.col-md-4.col-sm-4.col-xs-12.item.vcenter
+					.reason-card
+						.content.front
+							img(src="img/emp_v4.svg", alt="")
+							span Интеллект
+						.back
+							span Мы работаем с 1992 года, в штате уже более 350 сотрудников в 18 городах России и Монголии.
+				.col-lg-2.col-md-4.col-sm-4.col-xs-12.item.vcenter
+					.reason-card
+						.content.front
+							img(src="img/emp_v5.svg", alt="")
+							span Позитив
+						.back
+							span И в каждом из них комфортное рабочее место.
+		.news-block.proffs
+			.row
+				.col-lg-12
+					.news-header
+						h2.title Новости Форуса
+						.arrow-container
+							a(href="#").prev
+								img(src="img/arrow_left.svg", alt="")
+							a(href="#").next
+								img(src="img/arrow_right.svg", alt="")
+					.news-container.owl-carousel
+						.item
+							.row
+								.col-lg-8.col-md-6.col-sm-12.col-xs-12.half
+									a(href="").new.big
+										.img-block(style="background-image: url(img/new1_big.jpg)")
+											.gradient-overlay
+										.date 12 сентября
+										.name 26 октября Конференция "День управления документами и процессами"
+								.col-lg-4.col-md-6.col-sm-12.col-xs-12
+									.row
+										.col-lg-12
+											a(href="").new.middle
+												.img-block(style="background-image: url(img/new2.jpg)")
+													.gradient-overlay
+												.date 3 сентября
+												.name Профессия бухгалтер: Говорим о главных тенденциях
+										.col-lg-6.col-md-6.col-sm-6.col-xs-12
+											a(href="").new.small
+												.img-block(style="background-image: url(img/new3.jpg)")
+													.gradient-overlay
+												.date 27 декабря
+												.name Атмосфера мероприятия была просто прекрасной
+										.col-lg-6.col-md-6.col-sm-6.col-xs-12
+											a(href="").new.small.all
+												.img-block(style="background-image: url(img/new3.jpg)")
+													.gradient-overlay
+												.date 
+												.name Смотреть все новости
+						.item
+							.row
+								.col-lg-8.col-md-6.col-sm-12.col-xs-12.half
+									a(href="").new.big
+										.img-block(style="background-image: url(img/new1_big.jpg)")
+											.gradient-overlay
+										.date 12 сентября
+										.name 26 октября Конференция "День управления документами и процессами"
+								.col-lg-4.col-md-6.col-sm-12.col-xs-12
+									.row
+										.col-lg-12
+											a(href="").new.middle
+												.img-block(style="background-image: url(img/new2.jpg)")
+													.gradient-overlay
+												.date 3 сентября
+												.name Профессия бухгалтер: Говорим о главных тенденциях
+										.col-lg-6.col-md-6.col-sm-6.col-xs-12
+											a(href="").new.small
+												.img-block(style="background-image: url(img/new3.jpg)")
+													.gradient-overlay
+												.date 27 декабря
+												.name Атмосфера мероприятия была просто прекрасной
+										.col-lg-6.col-md-6.col-sm-6.col-xs-12
+											a(href="").new.small.all
+												.img-block(style="background-image: url(img/new3.jpg)")
+													.gradient-overlay
+												.date 
+												.name Смотреть все новости
+		.news-block.proffs
+			.row
+				.col-lg-12
+					.photo-header
+						h2.title Фотоотчёты с мероприятий
+						.arrow-container
+							a(href="#").prev
+								img(src="img/arrow_left.svg", alt="")
+							a(href="#").next
+								img(src="img/arrow_right.svg", alt="")
+					.photo-container.owl-carousel
+						.item
+							.row
+								.col-lg-8.col-md-6.col-sm-12.col-xs-12
+									.row
+										.col-lg-6.col-md-6.col-sm-6.col-xs-12.half
+											a(href="").new.big
+												.img-block(style="background-image: url(img/ph1.jpg)")
+													.gradient-overlay
+										.col-lg-6.col-md-6.col-sm-6.col-xs-12.half
+											a(href="").new.big
+												.img-block(style="background-image: url(img/ph2.jpg)")
+													.gradient-overlay
+								.col-lg-4.col-md-6.col-sm-12.col-xs-12
+									.row
+										.col-lg-6.col-md-6.col-sm-6.col-xs-12
+											a(href="").new.middle
+												.img-block(style="background-image: url(img/ph3.jpg)")
+													.gradient-overlay
+										.col-lg-6.col-md-6.col-sm-6.col-xs-12
+											a(href="").new.middle
+												.img-block(style="background-image: url(img/ph4.jpg)")
+													.gradient-overlay
+										.col-lg-6.col-md-6.col-sm-6.col-xs-12
+											a(href="").new.small
+												.img-block(style="background-image: url(img/ph5.jpg)")
+													.gradient-overlay
+										.col-lg-6.col-md-6.col-sm-6.col-xs-12
+											a(href="").new.small.all.invert
+												.date 
+												.name Смотреть все фотоотчеты
+						.item
+							.row
+								.col-lg-8.col-md-8.col-sm-12.col-xs-12
+									.row
+										.col-lg-6.col-md-6.col-sm-6.col-xs-12.half
+											a(href="").new.big
+												.img-block(style="background-image: url(img/ph1.jpg)")
+													.gradient-overlay
+										.col-lg-6.col-md-6.col-sm-6.col-xs-12.half
+											a(href="").new.big
+												.img-block(style="background-image: url(img/ph2.jpg)")
+													.gradient-overlay
+								.col-lg-4.col-md-4.col-sm-12.col-xs-12
+									.row
+										.col-lg-6.col-md-6.col-sm-6.col-xs-12
+											a(href="").new.middle
+												.img-block(style="background-image: url(img/ph3.jpg)")
+													.gradient-overlay
+										.col-lg-6.col-md-6.col-sm-6.col-xs-12
+											a(href="").new.middle
+												.img-block(style="background-image: url(img/ph4.jpg)")
+													.gradient-overlay
+										.col-lg-6.col-md-6.col-sm-6.col-xs-12
+											a(href="").new.small
+												.img-block(style="background-image: url(img/ph5.jpg)")
+													.gradient-overlay
+										.col-lg-6.col-md-6.col-sm-6.col-xs-12
+											a(href="").new.small.all.invert
+												.date 
+												.name Смотреть все фотоотчеты
+		.study-articles
+			h2.title Обучение и развитие
+			.row
+				.col-lg-4.col-md-4.col-sm-12.col-xs-12.article
+					a(href="").item
+						.img-block(style="background-image: url(img/edu1.jpg)")
+							.gradient-overlay
+						.text
+							span Курс молодого бойца
+				.col-lg-4.col-md-4.col-sm-12.col-xs-12.article
+					a(href="").item
+						.img-block(style="background-image: url(img/edu2.jpg)")
+							.gradient-overlay
+						.text
+							span Учебные программы
+				.col-lg-4.col-md-4.col-sm-12.col-xs-12.article
+					a(href="").item
+						.img-block(style="background-image: url(img/edu3.jpg)")
+							.gradient-overlay
+						.text
+							span Корпоративный университет
+		.hobbies-articles
+			h2.title Хобби и творчество сотрудников
+			.row.hobbies
+				.col-lg-6.col-md-12.col-sm-12.col-xs-12
+					a(href="#").item
+						.img-block(style="background-image: url(img/hob1.jpg)")
+							.gradient-overlay
+						.text
+							span Клуб саморазвития
+				.col-lg-6.col-md-12.col-sm-12.col-xs-12
+					a(href="#").item
+						.img-block(style="background-image: url(img/hob2.jpg)")
+							.gradient-overlay
+						.text
+							span Спортивный клуб
+			.row.hobby-specials
+				.col-lg-6.col-md-12.col-sm-12.col-xs-12
+					a(href="").item
+						h2 Сотрудник года
+						.line
+						p Каждый год мы выбираем наиболее отличившегося сотрудника и поздравляем его всем колективом. Старайся лучшеи в следующий раз ты станешь Сотрудником года!
+						.img-block
+							img(src="img/hobs1.jpg", alt="")
+							.gradient-overlay
+				.col-lg-6.col-md-12.col-sm-12.col-xs-12
+					a(href="").item
+						h2 Благодарю
+						.line
+						p Раздел, где вы можете поблагодарить любого из сотрудников компании «Форус»
+						.img-block
+							img(src="img/hobs2.jpg", alt="")
+							.gradient-overlay
+
+	include modules/footer.jade
+
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js")
+	script(src="js/owl.carousel.min.js")
+	script(src="js/bootstrap.min.js")
+	script(src="js/app.js")
