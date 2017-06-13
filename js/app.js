@@ -166,6 +166,118 @@ $(document).ready(function(){
 	    });
 	}
 
+	$('.point').click(function(){
+		var id = $(this).data('id');
+		moveDude(id);
+		$('.career-text p').fadeOut(300);
+		setTimeout(function(){
+			$('.career-text p').eq(id+1).fadeIn(300);
+		}, 1000)
+	});
+
+	$('.point').each(function(){
+		var y = $(this)[0].getBBox().y + 40;
+		var x = $(this)[0].getBBox().x - (290/2);
+		$('#svgWrapper .svg-container').append('<div class="career-text" style="left:'+x+'px; top:'+y+'px;">'+
+			'<a href="#">Консультант</a>'+
+			'<p>- активный и целеустремленный специалист, владеющий навыками коммуникации, который занимается привлечением клиентов через «холодные звонки» и выстраивает с ними долгосрочные партнерские отношения</p>'+
+			'</div>');
+	});
+
+	if ($('.svg-container').length){
+		var svgPan = $('.svg-container');
+		svgPan.width($('.svg-container svg').width());
+		var move;
+		var stop = $('.svg-container svg').width() - $(window).width();
+		$(window).resize(function(){
+			var stop = $('.svg-container svg').width() - $(window).width();
+		})
+		var move_start;
+		if (svgPan.width() > $(window).width()){
+			svgPan.hammer().bind('panstart', function(e){
+				var matrix = svgPan.css('transform');
+				matrix = matrix.split('(')[1];
+				matrix = matrix.split(')')[0];
+				matrix = matrix.split(',');
+				matrix = matrix[4];
+				move_start = parseInt(matrix, 10);
+				move_start = Math.abs(move_start);
+				console.log("move_start", move_start);
+			})
+			svgPan.hammer().bind("pan", function(ev){
+				var move_count = ev.gesture.deltaX * (-1);
+				move = move_start + move_count;
+				if (move >= stop){
+					svgPan.css({transform: 'translateX(-'+stop+'px)'});	
+				} else {
+					svgPan.css({transform: 'translateX(-'+move+'px)'});
+				}
+			});
+		}
+
+	}
+
+
+	if($('.svg-walk-path').length){
+
+
+		$('.svg-walk-path .svg-cont:visible .point').each(function(){
+			if ($(window).width() > 1020){
+				var id = $(this).index()/2 - 1;
+			} else {
+				var id = $(this).index() - 2;
+			}
+			if ($(window).width() > 1025){
+				var y = $(this)[0].getBBox().y - ($('.text-block').eq(id).height());
+				$('.text-block').eq(id).css({'top': y});
+			} else if($(window).width() > 992) {
+				var y = $(this)[0].getBBox().y - ($('.text-block').eq(id).height() * 1.25);
+				if (id==2){
+					$('.text-block').eq(id).css({'top': y-250});
+				} else {
+					$('.text-block').eq(id).css({'top': y});
+				}
+			} else {
+				var y = $(this)[0].getBBox().y - ($('.text-block').eq(id).height()/2);
+				$('.text-block').eq(id).css({'top': y});
+			}
+		});
+
+
+		var lastScrollTop = 0;
+		var deg = 0;
+		$(window).scroll(function(event){
+			var st = $(this).scrollTop();
+			if (st > lastScrollTop){
+				if (st > $('.svg-walk-path').offset().top - 750){
+					scrollDude();
+					$('.svg-cont:visible .point').each(function(){
+						if ($(window).width() > 992){
+							if (st > $(this).offset().top - ($(window).height() - 150)*1.25){
+								var id = $(this).index()/2 - 1;
+								$('.text-block').eq(id).addClass('in');
+							}
+						} else{
+							if (st > $(this).offset().top - ($(window).height())/1.5){
+								var id = $(this).index() - 2;
+								$('.text-block').eq(id).addClass('in');
+							}
+						}
+					});
+
+					$('.turn').each(function(){
+						if ($(dude_sc).offset().top >= $(this).offset().top - 200 && $(this).hasClass('inOrder')){
+							deg += 180;
+							$(this).removeClass('inOrder');
+							$('#dude image.img-start').attr('style', 'transform: rotate3d(0,1,0,'+deg+'deg);')
+						}
+					})
+				}
+			}
+			lastScrollTop = st;
+		});
+	}
+
 });
 
 
@@ -221,3 +333,83 @@ function initMap() {
           title: 'Hello World!'
         });
   }
+
+
+// svg line path code 
+if ($('.svg-container').length){
+	var counter = 0;
+	var start = true;
+	var svgContainer = document.getElementById('svgWrapper');
+	var ns = "http://www.w3.org/2000/svg";
+	var svg = svgContainer.getElementsByTagNameNS(ns, 'path');
+	var dude = document.getElementById('dude');
+	var myReq;
+}
+
+//svg scroll
+if($('.svg-walk-path').length){
+	if ($(window).width() > 1020){
+		var counter_sc = 0;
+		var start_sc = true;
+		var svgContainer_sc = document.getElementById('svgScroll');
+		var ns_sc = "http://www.w3.org/2000/svg";
+		var svg_sc = svgContainer_sc.getElementsByTagNameNS(ns_sc, 'path');
+		var dude_sc = document.getElementById('dude');
+		var path = svg_sc[0].getTotalLength();
+	} else {
+		var counter_sc = 0;
+		var start_sc = true;
+		var svgContainer_sc = document.getElementById('mobileScroll');
+		var ns_sc = "http://www.w3.org/2000/svg";
+		var svg_sc = svgContainer_sc.getElementsByTagNameNS(ns_sc, 'path');
+		var dude_sc = document.getElementById('dude_mobile');
+		var path = svg_sc[0].getTotalLength();
+	}
+}
+
+function moveDude(id){
+	counter += 0.015;
+	var straightLength = svg[id].getTotalLength();
+	var new_transform = [dude.transform.baseVal[0].matrix.e, dude.transform.baseVal[0].matrix.f]
+	if (parseInt(counter,10) === 1) {
+		start = false;
+	} else if (parseInt(counter,10) < 0) {
+		start = true;
+	}
+
+	if (start){
+		dude.setAttribute("transform", "translate(" + 
+		(svg[id].getPointAtLength(counter * straightLength).x - 50)  + "," +
+		(svg[id].getPointAtLength(counter * straightLength).y - parseInt(dude.height.animVal.value)) + ")");
+		myReq = requestAnimationFrame(function(){
+			moveDude(id);
+		});
+	} else {
+		cancelAnimationFrame(myReq);
+		counter = 0;
+		start = true;
+	}
+}
+
+function scrollDude(){
+	if ($(window).width() > 1020){
+		counter_sc += 0.006;
+	} else {
+		counter_sc += 0.005;
+	}
+ 	if (parseInt(counter_sc,10) === 1) {
+		start_sc = false;
+	} else if (parseInt(counter_sc,10) < 0) {
+		start_sc = true;
+	}
+
+	if (start_sc){
+		dude_sc.setAttribute("transform", "translate(" + 
+		(svg_sc[0].getPointAtLength(counter_sc * path).x - 50)  + "," +
+		(svg_sc[0].getPointAtLength(counter_sc * path).y - parseInt(dude_sc.attributes.height.value)) + ")");
+	} else {
+		$('.img-start').fadeOut(100, function(){
+			$('.img-finish').fadeIn(100);
+		});
+	}
+}

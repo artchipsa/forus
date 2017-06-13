@@ -611,58 +611,65 @@ header{
 	}
 }
 
-.vacancy-block{
-	.vacancy-city-switch{
-		margin-bottom: 38px;
-		border-bottom: 1px solid @true-gray;
-		display: inline-block;
-		overflow: hidden;
-		li{
-			margin-bottom: 0px;
-			margin-right: 0px;
-			&.active{
-				a{
-					background-color: transparent;
-					border: none;
-					&:after{
-						bottom: 0px;
-					}
-				}
-			}
-			&:hover,&:focus{
-				a{
-					background-color: transparent;
-					border: none;
-					&:after{
-						bottom: 0px;
-					}
-				}
-			}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+	border: none;
+	color: inherit;
+	background-color: inherit;
+}
+
+.vacancy-city-switch{
+	margin-bottom: 38px;
+	border-bottom: 1px solid @true-gray;
+	display: inline-block;
+	overflow: hidden;
+	li{
+		margin-bottom: 0px;
+		margin-right: 0px;
+		&.active{
 			a{
-				color: @gray-lighter;
+				background-color: transparent;
 				border: none;
-				padding: 0px 38px 12px 0px;
-				font-size: 22px;
-				font-family: Nova;
-				position: relative;
-				margin-right: 0px;
-				&:hover{
-					background-color: transparent;
-					color: @gray-lighter;
-				}
 				&:after{
-					content: '';
-					position: absolute;
-					bottom: -4px;
-					left: 0px;
-					width: 100%;
-					height: 3px;
-					background-color: @gray-lighter;
-					transition: all .35s;
+					bottom: 0px;
 				}
 			}
 		}
+		&:hover,&:focus{
+			a{
+				background-color: transparent;
+				border: none;
+				&:after{
+					bottom: 0px;
+				}
+			}
+		}
+		a{
+			color: @gray-lighter;
+			border: none;
+			padding: 0px 38px 12px 0px;
+			font-size: 22px;
+			font-family: Nova;
+			position: relative;
+			margin-right: 0px;
+			&:hover{
+				background-color: transparent;
+				color: @gray-lighter;
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				bottom: -4px;
+				left: 0px;
+				width: 100%;
+				height: 3px;
+				background-color: @gray-lighter;
+				transition: all .35s;
+			}
+		}
 	}
+}
+
+.vacancy-block{
 	.tab-content{
 		margin-bottom: 30px;
 	}
@@ -895,10 +902,16 @@ header{
 	background-position: left;
 	background-repeat: repeat-y;
 	background-size: 8px;
+	.form-group{
+		margin-bottom: 30px;
+		&:last-child{
+			margin-bottom: 0px;
+		}
+	}
 	h2{
 		margin: 0px;
 		font-family: Nova;
-		font-size: 32px;
+		font-size: 23px;
 		line-height: 120%;
 		font-weight: bold;
 		text-transform: uppercase;
@@ -934,6 +947,7 @@ header{
 	}
 	.form-inline .form-group{
 		margin-right: 115px;
+		margin-bottom: 0px;
 		width: 20%;
 		&:first-child{
 			width: 26%
@@ -1473,6 +1487,15 @@ footer{
 	font-weight: bold;
 	text-transform: uppercase;
 	transition: all .35s;
+	&.gray{
+		color: #222;
+		border: 2px solid @footer;
+		background-color: transparent;
+		&:hover{
+			color: @white;
+			background-color: @dark-blue;
+		}
+	}
 	&.default{
 		color: @white;
 		border: 2px solid @white;
@@ -2223,6 +2246,281 @@ a:focus {
     outline-offset: -2px;
     text-decoration: none;
 }
+
+.career-block{
+	margin-top: 60px;
+}
+
+#svgWrapper{
+	margin-bottom: 60px;
+	position: relative;
+	min-height: 800px;
+	overflow: visible;
+	.point{
+		cursor: pointer;
+		padding: 20px;
+	}
+	p{
+		font-family: Nova;
+		font-size: 23px;
+		width: 30%;
+		line-height: 130%;
+	}
+	.svg-container{
+		position: relative;
+		transform: translateX(0px;);
+	}
+	svg{
+		overflow: visible;
+		#dude{
+			transform-origin: 0px 0px 0px;
+		}
+		.point{
+			position: absolute;
+		}
+	}
+	.career-text{
+		position: absolute;
+		width: 320px;
+		text-align: center;
+		&:first-child{
+			top: 102%;
+			p{
+				display: block;
+			}
+		}
+		a{
+			font-size: 23px;
+			font-family: Nova;
+			font-weight: 800;
+			color: @blue-gray;
+			margin-bottom: 15px;
+			display: inline-block;
+			text-align: center;
+		}
+		p{
+			display: none;
+			color: @blue-gray;
+			font-size: 14px;
+			width: 100%;
+
+		}
+	}
+}
+.career-bottom-block{
+	margin-bottom: 60px;
+	.row{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.vacancy-email{
+		margin-bottom: 0px;
+	}
+	.col-xs-12{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		&:first-child{
+			.item{
+				flex-wrap: nowrap;
+			}
+		}
+		.item{
+			background-color: @email;
+			padding: 50px 40px;
+			display: flex;
+			flex-wrap: wrap;
+			img{
+				margin-right: 30px;
+			}
+			.text{
+				display: inline-block;
+				.tag{
+					font-size: 16px;
+					color: #A8A8A8;
+					margin-bottom: 18px;
+				}
+				.line{
+					margin-bottom: 18px;
+					background-color: @true-gray;
+				}
+				.name{
+					font-size: 23px;
+					font-family: Nova;
+					font-weight: 800;
+					margin-bottom: 28px;
+				}
+				p{
+					font-size: 16px;
+					line-height: 150%;
+					margin-bottom: 28px;
+					width: 90%
+				}
+				h2{
+					text-transform: uppercase;
+					font-family: Nova;
+					font-weight: 800;
+					margin-bottom: 20px;
+					font-size: 30px;
+				}
+				a.default{
+					margin-top: 30px;
+				    border: 2px solid #9FA3AF;
+				    text-transform: uppercase;
+				    padding: 18px 28px;
+				    color: #9FA3AF;
+				    font-family: Nova;
+				    font-size: 15px;
+				    font-weight: 800;
+				    line-height: 100%;
+				    background-color: transparent;
+				    transition: all .35s;
+				    &:hover{
+				    	color: @dark-blue;
+						border-color: @dark-blue;
+						background-color: @white;
+				    }
+				}
+			}
+		}
+	}
+}
+
+.course-block{
+	margin-top: 60px;
+	margin-bottom: 60px;
+	h2{
+		font-size: 45px;
+		font-family: Nova;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+}
+.svg-walk-path{
+	position: relative;
+	margin: 260px 0px;
+	overflow: visible;
+	#dude{
+		z-index: 2;
+		image{
+			transition: all .25s;
+			transform-origin: 80%;
+		}
+	}
+	svg{
+		width: 80%;
+		margin: 0 auto;
+		display: block;
+		overflow: visible;
+	}
+	.turn{
+		opacity: 0;
+	}
+	.svg-container{
+		position: relative;
+
+	}
+	.text-block{
+		position: absolute;
+		width: 522px;
+		overflow: visible;
+		opacity: 0;
+		transition: all .35s;
+		&.in{
+			opacity: 1;
+		}
+		&:nth-child(1){
+			background-image: url(../img/path_1.svg);
+			background-position: right top;
+			background-size: 60%;
+			background-repeat: no-repeat;
+			right: 5%;
+		}
+		&:nth-child(2){
+			background-image: url(../img/path_2.svg);
+			background-position: right top;
+			background-size: 60%;
+			background-repeat: no-repeat;
+			left: 5%;
+		}
+		&:nth-child(3){
+			background-image: url(../img/path_3.svg);
+			background-position: right top;
+			background-size: 60%;
+			background-repeat: no-repeat;
+			right: 5%;
+		}
+		.number{
+			width: 100px;
+			height: 100px;
+			border: 2px solid darken(@blue, 15%);
+			font-size: 88px;
+			font-family: Nova;
+			font-weight: 800;
+			text-align: center;
+			line-height: 100%;
+			padding: 8px 0px;
+			color: darken(@blue, 15%);
+			margin-bottom: 30px;
+		}
+		.name{
+			font-size: 42px;
+			font-family: Nova;
+			font-weight: 800;
+			color: darken(@blue, 15%);
+			margin-bottom: 30px;
+		}
+		.line{
+			background-color: darken(@blue, 15%);
+			margin-bottom: 30px;
+		}
+		p{
+			font-size: 16px;
+			width: 90%;
+		}
+	}
+}
+.mobile-path{
+	display: none;
+}
+.finish{
+	text-align: center;
+	h2{
+		text-transform: none;
+	}
+}
+
+.fail-block{
+	padding-top: 250px;
+	text-align: center;
+	margin-bottom: 60px;
+	h1{
+		margin-bottom: 20px;
+		font-size: 15vw;
+		font-family: Nova;
+		font-weight: 800;
+		color: @yellow;
+	}
+	.subtext{
+		font-size: 32px;
+		font-family: Nova;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	}
+	p{
+		font-size: 16px;
+		margin-bottom: 50px;
+	}
+}
+.img-finish{
+	display: none;
+}
+
+.st0{fill:none;stroke:#FAA61A;stroke-width:10;}
+.st1{opacity:0.3;fill:none;stroke:#0C4DA2;stroke-width:2;enable-background:new;}
+.st2{fill:#0C4DA2;}
+.cls-1,.cls-3{fill:none;}.cls-1{stroke:#faa61a;stroke-linecap:round;stroke-width:10px;}.cls-2{fill:#0c4da2;}.cls-3{stroke:#0c4da2;stroke-width:2px;opacity:0.3;isolation:isolate;}
+
 @media (max-width: 1367px){
 	.title{
 		font-size: 36px;
@@ -2331,6 +2629,29 @@ a:focus {
 	}
 	.growth .name{
 		font-size: 5vw!important;
+	}
+	.career-bottom-block .col-xs-12 .item .text h2{
+		font-size: 23px;
+	}
+	.career-bottom-block .col-xs-12 .item .text .name{
+		font-size: 21px;
+		margin-bottom: 20px;
+	}
+	.career-bottom-block .col-xs-12 .item .text p{
+		width: 100%;
+		font-size: 14px;
+	}
+	.vacancy-email .form-inline .form-group{
+		margin-right: 75px;
+	}
+	.svg-walk-path{
+		margin: 160px 0px;
+		svg{
+			width: 95%;
+		}
+	}
+	.fail-block{
+		padding-top: 150px;
 	}
 }
 
@@ -2467,6 +2788,43 @@ a:focus {
 	.about-slider .about-achivements .text{
 		padding: 30px 5%;
 	}
+	.career-bottom-block .col-xs-12 {
+		margin-bottom: 30px;
+	}
+	.career-bottom-block .col-xs-12 .item{
+		margin-bottom: 30px;
+		width: 100%;
+		height: 100%;
+	}
+	.career-bottom-block .col-xs-12 .vacancy-email{
+		width: 100%;
+	}
+	.svg-walk-path .text-block{
+		width: 380px;
+	}
+	.svg-walk-path .text-block .number{
+		width: 80px;
+		height: 80px;
+		font-size: 65px;
+		margin-bottom: 20px;
+	}
+	.svg-walk-path .text-block .name{
+		font-size: 28px;
+		margin-bottom: 20px;
+	}
+	.svg-walk-path .text-block .line{
+		margin-bottom: 20px;
+	}
+	.svg-walk-path .text-block p{
+		font-size: 14px;
+		width: 100%;
+	}
+	.vacancy-email .form-inline .form-group{
+		margin-right: 45px;
+	}
+	.svg-walk-path svg{
+		width: 100%;
+	}
 }
 
 @media (max-width: 769px){
@@ -2602,6 +2960,41 @@ a:focus {
 	}
 	.growth .name{
 		font-size: 8vw!important;
+	}
+	#svgWrapper p{
+		width: 70%;
+	}
+
+	.large-path{
+		display: none;
+	}
+	.mobile-path{
+		display: block;
+		height: 1836px;
+		svg{
+			height: 100%;
+			width: 20%;
+			margin: 0px;
+		}
+	}
+	.text-block{
+		right: 15%!important;
+		left: auto!important;
+	}
+	.finish{
+		text-align: left;
+	}
+	.svg-walk-path{
+	    margin-top: 200px;
+    	margin-bottom: 50px;
+	}
+	.vacancy-email .form-inline .form-group{
+	    margin-right: 0px;
+    	width: 100%!important;
+    	margin-bottom: 40px;
+	}
+	.fail-block h1{
+		font-size: 19vw;
 	}
 }
 
@@ -2866,5 +3259,34 @@ a:focus {
 	}
 	.growth .name{
 		font-size: 10vw!important;
+	}
+	.mobile-path{
+		display: block;
+		height: 1836px;
+		svg{
+			height: 100%;
+			width: 10%;
+			margin: 0px;
+		}
+	}
+	.svg-walk-path {
+	    margin-top: 100px;
+	    margin-bottom: 50px;
+	}
+	.finish h2{
+		font-size: 34px;
+	}
+	.svg-walk-path .text-block{
+		width: 260px;
+	    right: 2%!important;
+	}
+	.fail-block{
+		padding-top: 70px;
+	}
+	.fail-block .subtext{
+		font-size: 23px;
+	}
+	.fail-block h1{
+		font-size: 42vw;
 	}
 }

@@ -585,33 +585,40 @@ header .phone a span {
   display: inline-block;
   width: 80%;
 }
-.vacancy-block .vacancy-city-switch {
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  border: none;
+  color: inherit;
+  background-color: inherit;
+}
+.vacancy-city-switch {
   margin-bottom: 38px;
   border-bottom: 1px solid #D7DBDD;
   display: inline-block;
   overflow: hidden;
 }
-.vacancy-block .vacancy-city-switch li {
+.vacancy-city-switch li {
   margin-bottom: 0px;
   margin-right: 0px;
 }
-.vacancy-block .vacancy-city-switch li.active a {
+.vacancy-city-switch li.active a {
   background-color: transparent;
   border: none;
 }
-.vacancy-block .vacancy-city-switch li.active a:after {
+.vacancy-city-switch li.active a:after {
   bottom: 0px;
 }
-.vacancy-block .vacancy-city-switch li:hover a,
-.vacancy-block .vacancy-city-switch li:focus a {
+.vacancy-city-switch li:hover a,
+.vacancy-city-switch li:focus a {
   background-color: transparent;
   border: none;
 }
-.vacancy-block .vacancy-city-switch li:hover a:after,
-.vacancy-block .vacancy-city-switch li:focus a:after {
+.vacancy-city-switch li:hover a:after,
+.vacancy-city-switch li:focus a:after {
   bottom: 0px;
 }
-.vacancy-block .vacancy-city-switch li a {
+.vacancy-city-switch li a {
   color: #9FA3B0;
   border: none;
   padding: 0px 38px 12px 0px;
@@ -620,11 +627,11 @@ header .phone a span {
   position: relative;
   margin-right: 0px;
 }
-.vacancy-block .vacancy-city-switch li a:hover {
+.vacancy-city-switch li a:hover {
   background-color: transparent;
   color: #9FA3B0;
 }
-.vacancy-block .vacancy-city-switch li a:after {
+.vacancy-city-switch li a:after {
   content: '';
   position: absolute;
   bottom: -4px;
@@ -842,10 +849,16 @@ header .phone a span {
   background-repeat: repeat-y;
   background-size: 8px;
 }
+.vacancy-email .form-group {
+  margin-bottom: 30px;
+}
+.vacancy-email .form-group:last-child {
+  margin-bottom: 0px;
+}
 .vacancy-email h2 {
   margin: 0px;
   font-family: Nova;
-  font-size: 32px;
+  font-size: 23px;
   line-height: 120%;
   font-weight: bold;
   text-transform: uppercase;
@@ -881,6 +894,7 @@ header .phone a span {
 }
 .vacancy-email .form-inline .form-group {
   margin-right: 115px;
+  margin-bottom: 0px;
   width: 20%;
 }
 .vacancy-email .form-inline .form-group:first-child {
@@ -1379,6 +1393,15 @@ footer .copyrights p a {
   font-weight: bold;
   text-transform: uppercase;
   transition: all .35s;
+}
+.btn.gray {
+  color: #222;
+  border: 2px solid #F1F1F1;
+  background-color: transparent;
+}
+.btn.gray:hover {
+  color: #fff;
+  background-color: #433793;
 }
 .btn.default {
   color: #fff;
@@ -2069,6 +2092,300 @@ a:focus {
   outline-offset: -2px;
   text-decoration: none;
 }
+.career-block {
+  margin-top: 60px;
+}
+#svgWrapper {
+  margin-bottom: 60px;
+  position: relative;
+  min-height: 800px;
+  overflow: visible;
+}
+#svgWrapper .point {
+  cursor: pointer;
+  padding: 20px;
+}
+#svgWrapper p {
+  font-family: Nova;
+  font-size: 23px;
+  width: 30%;
+  line-height: 130%;
+}
+#svgWrapper .svg-container {
+  position: relative;
+  transform: translateX(0px);
+}
+#svgWrapper svg {
+  overflow: visible;
+}
+#svgWrapper svg #dude {
+  transform-origin: 0px 0px 0px;
+}
+#svgWrapper svg .point {
+  position: absolute;
+}
+#svgWrapper .career-text {
+  position: absolute;
+  width: 320px;
+  text-align: center;
+}
+#svgWrapper .career-text:first-child {
+  top: 102%;
+}
+#svgWrapper .career-text:first-child p {
+  display: block;
+}
+#svgWrapper .career-text a {
+  font-size: 23px;
+  font-family: Nova;
+  font-weight: 800;
+  color: #9FA3AF;
+  margin-bottom: 15px;
+  display: inline-block;
+  text-align: center;
+}
+#svgWrapper .career-text p {
+  display: none;
+  color: #9FA3AF;
+  font-size: 14px;
+  width: 100%;
+}
+.career-bottom-block {
+  margin-bottom: 60px;
+}
+.career-bottom-block .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.career-bottom-block .vacancy-email {
+  margin-bottom: 0px;
+}
+.career-bottom-block .col-xs-12 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.career-bottom-block .col-xs-12:first-child .item {
+  flex-wrap: nowrap;
+}
+.career-bottom-block .col-xs-12 .item {
+  background-color: #EDEFF7;
+  padding: 50px 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.career-bottom-block .col-xs-12 .item img {
+  margin-right: 30px;
+}
+.career-bottom-block .col-xs-12 .item .text {
+  display: inline-block;
+}
+.career-bottom-block .col-xs-12 .item .text .tag {
+  font-size: 16px;
+  color: #A8A8A8;
+  margin-bottom: 18px;
+}
+.career-bottom-block .col-xs-12 .item .text .line {
+  margin-bottom: 18px;
+  background-color: #D7DBDD;
+}
+.career-bottom-block .col-xs-12 .item .text .name {
+  font-size: 23px;
+  font-family: Nova;
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+.career-bottom-block .col-xs-12 .item .text p {
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 28px;
+  width: 90%;
+}
+.career-bottom-block .col-xs-12 .item .text h2 {
+  text-transform: uppercase;
+  font-family: Nova;
+  font-weight: 800;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.career-bottom-block .col-xs-12 .item .text a.default {
+  margin-top: 30px;
+  border: 2px solid #9FA3AF;
+  text-transform: uppercase;
+  padding: 18px 28px;
+  color: #9FA3AF;
+  font-family: Nova;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 100%;
+  background-color: transparent;
+  transition: all .35s;
+}
+.career-bottom-block .col-xs-12 .item .text a.default:hover {
+  color: #433793;
+  border-color: #433793;
+  background-color: #fff;
+}
+.course-block {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.course-block h2 {
+  font-size: 45px;
+  font-family: Nova;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.svg-walk-path {
+  position: relative;
+  margin: 260px 0px;
+  overflow: visible;
+}
+.svg-walk-path #dude {
+  z-index: 2;
+}
+.svg-walk-path #dude image {
+  transition: all .25s;
+  transform-origin: 80%;
+}
+.svg-walk-path svg {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  overflow: visible;
+}
+.svg-walk-path .turn {
+  opacity: 0;
+}
+.svg-walk-path .svg-container {
+  position: relative;
+}
+.svg-walk-path .text-block {
+  position: absolute;
+  width: 522px;
+  overflow: visible;
+  opacity: 0;
+  transition: all .35s;
+}
+.svg-walk-path .text-block.in {
+  opacity: 1;
+}
+.svg-walk-path .text-block:nth-child(1) {
+  background-image: url(../img/path_1.svg);
+  background-position: right top;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  right: 5%;
+}
+.svg-walk-path .text-block:nth-child(2) {
+  background-image: url(../img/path_2.svg);
+  background-position: right top;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  left: 5%;
+}
+.svg-walk-path .text-block:nth-child(3) {
+  background-image: url(../img/path_3.svg);
+  background-position: right top;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  right: 5%;
+}
+.svg-walk-path .text-block .number {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #286594;
+  font-size: 88px;
+  font-family: Nova;
+  font-weight: 800;
+  text-align: center;
+  line-height: 100%;
+  padding: 8px 0px;
+  color: #286594;
+  margin-bottom: 30px;
+}
+.svg-walk-path .text-block .name {
+  font-size: 42px;
+  font-family: Nova;
+  font-weight: 800;
+  color: #286594;
+  margin-bottom: 30px;
+}
+.svg-walk-path .text-block .line {
+  background-color: #286594;
+  margin-bottom: 30px;
+}
+.svg-walk-path .text-block p {
+  font-size: 16px;
+  width: 90%;
+}
+.mobile-path {
+  display: none;
+}
+.finish {
+  text-align: center;
+}
+.finish h2 {
+  text-transform: none;
+}
+.fail-block {
+  padding-top: 250px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.fail-block h1 {
+  margin-bottom: 20px;
+  font-size: 15vw;
+  font-family: Nova;
+  font-weight: 800;
+  color: #F9A519;
+}
+.fail-block .subtext {
+  font-size: 32px;
+  font-family: Nova;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.fail-block p {
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+.img-finish {
+  display: none;
+}
+.st0 {
+  fill: none;
+  stroke: #FAA61A;
+  stroke-width: 10;
+}
+.st1 {
+  opacity: 0.3;
+  fill: none;
+  stroke: #0C4DA2;
+  stroke-width: 2;
+  enable-background: new;
+}
+.st2 {
+  fill: #0C4DA2;
+}
+.cls-1,
+.cls-3 {
+  fill: none;
+}
+.cls-1 {
+  stroke: #faa61a;
+  stroke-linecap: round;
+  stroke-width: 10px;
+}
+.cls-2 {
+  fill: #0c4da2;
+}
+.cls-3 {
+  stroke: #0c4da2;
+  stroke-width: 2px;
+  opacity: 0.3;
+  isolation: isolate;
+}
 @media (max-width: 1367px) {
   .title {
     font-size: 36px;
@@ -2177,6 +2494,29 @@ a:focus {
   }
   .growth .name {
     font-size: 5vw!important;
+  }
+  .career-bottom-block .col-xs-12 .item .text h2 {
+    font-size: 23px;
+  }
+  .career-bottom-block .col-xs-12 .item .text .name {
+    font-size: 21px;
+    margin-bottom: 20px;
+  }
+  .career-bottom-block .col-xs-12 .item .text p {
+    width: 100%;
+    font-size: 14px;
+  }
+  .vacancy-email .form-inline .form-group {
+    margin-right: 75px;
+  }
+  .svg-walk-path {
+    margin: 160px 0px;
+  }
+  .svg-walk-path svg {
+    width: 95%;
+  }
+  .fail-block {
+    padding-top: 150px;
   }
 }
 @media (max-width: 1025px) {
@@ -2313,6 +2653,43 @@ a:focus {
   .about-slider .about-achivements .text {
     padding: 30px 5%;
   }
+  .career-bottom-block .col-xs-12 {
+    margin-bottom: 30px;
+  }
+  .career-bottom-block .col-xs-12 .item {
+    margin-bottom: 30px;
+    width: 100%;
+    height: 100%;
+  }
+  .career-bottom-block .col-xs-12 .vacancy-email {
+    width: 100%;
+  }
+  .svg-walk-path .text-block {
+    width: 380px;
+  }
+  .svg-walk-path .text-block .number {
+    width: 80px;
+    height: 80px;
+    font-size: 65px;
+    margin-bottom: 20px;
+  }
+  .svg-walk-path .text-block .name {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .svg-walk-path .text-block .line {
+    margin-bottom: 20px;
+  }
+  .svg-walk-path .text-block p {
+    font-size: 14px;
+    width: 100%;
+  }
+  .vacancy-email .form-inline .form-group {
+    margin-right: 45px;
+  }
+  .svg-walk-path svg {
+    width: 100%;
+  }
 }
 @media (max-width: 769px) {
   .way-blocks-wrapper {
@@ -2448,6 +2825,40 @@ a:focus {
   }
   .growth .name {
     font-size: 8vw!important;
+  }
+  #svgWrapper p {
+    width: 70%;
+  }
+  .large-path {
+    display: none;
+  }
+  .mobile-path {
+    display: block;
+    height: 1836px;
+  }
+  .mobile-path svg {
+    height: 100%;
+    width: 20%;
+    margin: 0px;
+  }
+  .text-block {
+    right: 15%!important;
+    left: auto!important;
+  }
+  .finish {
+    text-align: left;
+  }
+  .svg-walk-path {
+    margin-top: 200px;
+    margin-bottom: 50px;
+  }
+  .vacancy-email .form-inline .form-group {
+    margin-right: 0px;
+    width: 100%!important;
+    margin-bottom: 40px;
+  }
+  .fail-block h1 {
+    font-size: 19vw;
   }
 }
 @media (max-width: 469px) {
@@ -2713,5 +3124,34 @@ a:focus {
   }
   .growth .name {
     font-size: 10vw!important;
+  }
+  .mobile-path {
+    display: block;
+    height: 1836px;
+  }
+  .mobile-path svg {
+    height: 100%;
+    width: 10%;
+    margin: 0px;
+  }
+  .svg-walk-path {
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  .finish h2 {
+    font-size: 34px;
+  }
+  .svg-walk-path .text-block {
+    width: 260px;
+    right: 2%!important;
+  }
+  .fail-block {
+    padding-top: 70px;
+  }
+  .fail-block .subtext {
+    font-size: 23px;
+  }
+  .fail-block h1 {
+    font-size: 42vw;
   }
 }

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+html(lang="ru")
+head
+	meta(charset="UTF-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+	title Forus
+	link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800" rel="stylesheet")
+	link(rel="stylesheet", href="css/bootstrap.min.css")
+	link(rel="stylesheet", href="css/bootstrap-theme.min.css")
+	link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css")
+	link(rel="stylesheet", href="css/owl.carousel.min.css")
+	link(rel="stylesheet", href="css/owl.theme.default.css")
+	link(rel="stylesheet", href="css/style.css")
+body
+	include modules/header.jade
+
+	.hero-block
+		.img-block.students(style="background-image: url(img/course.jpg)")
+			.gradient-overlay
+		.hero-bottom-text
+			ol.breadcrumb
+				li
+					a(href="#") Главная
+				li.active
+					h1 Курс молодого бойца
+	.container-fluid
+		.course-block
+			h2 И так вы в форусе, на первых парах вас ждёт:
+			.svg-walk-path#svgScroll
+				.text-block
+					.number 1
+					.name Стажировка и адаптация
+					.line
+					p Твой путь в компании начинается со стажировки. Мы составим индивидуальную адаптационную программу, выполняя которую, ты узнаешь о структуре компании, задачах и целях твоего отдела, традициях и мероприятиях, научишься работать в нашей "корпоративной системе".
+				.text-block
+					.number 2
+					.name Наставники
+					.line
+					p Тебе будут помогать опытные коллеги твоего отдела, они научат и ответят на вопросы, ведь теперь вы в одной команде. Персональный наставник окажет максимум профессиональной поддержки. Обучение будет идти параллельно с выполнением производственных задач, поэтому от тебя потребуется желание учиться и получать новые знания, старание и ответственности при исполнении обязанностей. 
+				.text-block
+					.number 3
+					.name Закрытие стажировки
+					.line
+					p Подводим итог! На встрече с руководителем направления, наставником и HR-менеджером ты обсудишь, как проходил период адаптации, обучение и работы. Какие результаты достигнуты и планы на будущее. Теперь, ты выходишь в самостоятельное плавание с полной ответственностью за результат!
+				.svg-cont.large-path
+					svg(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1254 1836" style="enable-background:new 0 0 1254 1836;" xml:space="preserve")
+						path(class="st0" d="M8.9,7.1l1231.3,529.4c9.2,3.9,9,19.6-0.3,23.2L13,1038.9c-9.3,3.6-9.4,19.3-0.3,23.2l1227.4,515.8c9.2,3.9,9,19.6-0.3,23.2l-615.1,228.9")
+						g
+							path(class="st2" d="M10,0L10,0c3.9,0,7,3.1,7,7l0,0c0,3.9-3.1,7-7,7l0,0c-3.9,0-7-3.1-7-7l0,0C3,3.1,6.1,0,10,0z")
+						g.point
+							path(path class="st1" d="M627,254L627,254c9.9,0,18,8.1,18,18l0,0c0,9.9-8.1,18-18,18l0,0c-9.9,0-18-8.1-18-18l0,0C609,262.1,617.1,254,627,254z")
+							path(class="st2" d="M627,265L627,265c3.9,0,7,3.1,7,7l0,0c0,3.9-3.1,7-7,7l0,0c-3.9,0-7-3.1-7-7l0,0C620,268.1,623.1,265,627,265z")
+						g.turn.inOrder
+							path(class="st1" d="M1246,540L1246,540c3.9,0,7,3.1,7,7l0,0c0,3.9-3.1,7-7,7l0,0c-3.9,0-7-3.1-7-7l0,0C1239,543.1,1242.1,540,1246,540z")
+						g.point
+							path(class="st1" d="M627,781L627,781c9.9,0,18,8.1,18,18l0,0c0,9.9-8.1,18-18,18l0,0c-9.9,0-18-8.1-18-18l0,0C609,789.1,617.1,781,627,781z")
+							path(class="st2" d="M627,792L627,792c3.9,0,7,3.1,7,7l0,0c0,3.9-3.1,7-7,7l0,0c-3.9,0-7-3.1-7-7l0,0C620,795.1,623.1,792,627,792z")
+						g.turn.inOrder
+							path(class="st1" d="M7,1043L7,1043c3.9,0,7,3.1,7,7l0,0c0,3.9-3.1,7-7,7l0,0c-3.9,0-7-3.1-7-7l0,0C0,1046.1,3.1,1043,7,1043z")
+						g.point
+							path(class="st1" d="M627,1302L627,1302c9.9,0,18,8.1,18,18l0,0c0,9.9-8.1,18-18,18l0,0c-9.9,0-18-8.1-18-18l0,0C609,1310.1,617.1,1302,627,1302z")
+							path(class="st2" d="M627,1313L627,1313c3.9,0,7,3.1,7,7l0,0c0,3.9-3.1,7-7,7l0,0c-3.9,0-7-3.1-7-7l0,0C620,1316.1,623.1,1313,627,1313z")
+						g.turn.inOrder
+							path(class="st1" d="M1247,1582L1247,1582c3.9,0,7,3.1,7,7l0,0c0,3.9-3.1,7-7,7l0,0c-3.9,0-7-3.1-7-7l0,0C1240,1585.1,1243.1,1582,1247,1582z")
+						g
+							path(class="st2" d="M627,1822L627,1822c3.9,0,7,3.1,7,7l0,0c0,3.9-3.1,7-7,7l0,0c-3.9,0-7-3.1-7-7l0,0C620,1825.1,623.1,1822,627,1822z")
+						g#dude(height="200px" transform="translate(-20, -180)")
+							image.img-start(xlink:href="img/person-1.svg" height="200px")
+							image.img-finish(xlink:href="img/person-2.svg" height="200px")
+				.svg-cont.mobile-path#mobileScroll
+					svg(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 38 1836" xml:space="preserve")
+						path(class="cls-1" d="M19.15,7.1V1830")
+						path(path class="cls-2" d="M19.15,0h0a7,7,0,0,1,7,7h0a7,7,0,0,1-7,7h0a7,7,0,0,1-7-7h0A7,7,0,0,1,19.15,0Z")
+						g.point
+							path(class="cls-3" d="M19,254h0a18.05,18.05,0,0,1,18,18h0a18.05,18.05,0,0,1-18,18h0A18.05,18.05,0,0,1,1,272H1A18.05,18.05,0,0,1,19,254Z")
+							path(class="cls-2" d="M19,265h0a7,7,0,0,1,7,7h0a7,7,0,0,1-7,7h0a7,7,0,0,1-7-7h0A7,7,0,0,1,19,265Z")
+						g.point
+							path(class="cls-3" d="M19,781h0a18.05,18.05,0,0,1,18,18h0a18.05,18.05,0,0,1-18,18h0A18.05,18.05,0,0,1,1,799H1A18.05,18.05,0,0,1,19,781Z")
+							path(class="cls-2" d="M19,792h0a7,7,0,0,1,7,7h0a7,7,0,0,1-7,7h0a7,7,0,0,1-7-7h0A7,7,0,0,1,19,792Z")
+						g.point
+							path(class="cls-3" d="M19,1302h0a18.05,18.05,0,0,1,18,18h0a18.05,18.05,0,0,1-18,18h0a18.05,18.05,0,0,1-18-18H1A18.05,18.05,0,0,1,19,1302Z")
+							path(class="cls-2" d="M19,1313h0a7,7,0,0,1,7,7h0a7,7,0,0,1-7,7h0a7,7,0,0,1-7-7h0A7,7,0,0,1,19,1313Z")
+						path(class="cls-2" d="M19,1822h0a7,7,0,0,1,7,7h0a7,7,0,0,1-7,7h0a7,7,0,0,1-7-7h0A7,7,0,0,1,19,1822Z")
+						g#dude_mobile(height="200px" transform="translate(-20, -180)")
+							image(xlink:href="img/person-1.svg" height="200px")
+
+				.finish
+					h2 Поздравляем теперь <br> вы часть форуса
+		.vacancy-email
+			form.form-inline(action="")
+				.form-group
+					h2 Подписаться<br>на рассылку вакансий
+				.form-group
+					select.select2(name="" placeholder="Все вакансии")
+						option(value="0") Все вакансии
+						option(value="1") Бухгалтерия
+						option(value="2") IT
+				.form-group
+					input(type="email", name="", placeholder="Электронная почта")
+				.form-group
+					input(type="submit", value="подписаться")
+	include modules/footer.jade
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js")
+	script(src="js/owl.carousel.min.js")
+	script(src="js/bootstrap.min.js")
+	script(src="js/app.js")
