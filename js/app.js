@@ -166,6 +166,16 @@ $(document).ready(function(){
 	    });
 	}
 
+	$('.point').on('touchstart', function(){
+		var id = $(this).data('id');
+		moveDude(id);
+		alert('asd');
+		$('.career-text p').fadeOut(300);
+		setTimeout(function(){
+			$('.career-text p').eq(id+1).fadeIn(300);
+		}, 1000)
+	});
+
 	$('.point').click(function(){
 		var id = $(this).data('id');
 		moveDude(id);
@@ -371,7 +381,6 @@ if($('.svg-walk-path').length){
 function moveDude(id){
 	counter += 0.015;
 	var straightLength = svg[id].getTotalLength();
-	var new_transform = [dude.transform.baseVal[0].matrix.e, dude.transform.baseVal[0].matrix.f]
 	if (parseInt(counter,10) === 1) {
 		start = false;
 	} else if (parseInt(counter,10) < 0) {
