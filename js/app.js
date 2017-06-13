@@ -169,7 +169,6 @@ $(document).ready(function(){
 	$('.point').on('touchstart', function(){
 		var id = $(this).data('id');
 		moveDude(id);
-		alert('asd');
 		$('.career-text p').fadeOut(300);
 		setTimeout(function(){
 			$('.career-text p').eq(id+1).fadeIn(300);
@@ -179,7 +178,6 @@ $(document).ready(function(){
 	$('.point').click(function(){
 		var id = $(this).data('id');
 		moveDude(id);
-		alert('asd');
 		$('.career-text p').fadeOut(300);
 		setTimeout(function(){
 			$('.career-text p').eq(id+1).fadeIn(300);
