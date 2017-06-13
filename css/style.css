@@ -560,7 +560,7 @@ header .phone a span {
 }
 .reason-block .item .reason-card .back,
 .reason-block .item .reason-card .front {
-  -webkit-backface-visability: hidden;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .reason-block .item .reason-card .font {
