@@ -539,6 +539,7 @@ header .phone a span {
   position: relative;
   transition: 0.6s;
   transform-style: preserve-3d;
+  cursor: pointer;
 }
 .reason-block .item .reason-card .back {
   width: 100%;
