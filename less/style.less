@@ -581,6 +581,7 @@ header{
 				}
 			}
 			.back, .front{
+				-webkit-backface-visability: hidden;
 				backface-visibility: hidden;
 			}
 			.font{
@@ -747,6 +748,7 @@ header{
 				border: 1px solid transparent;
 				transition: all .35s;
 				overflow: hidden;
+				cursor: pointer;
 				&:hover{
 					background-color: transparent;
 					border-color: @dark-blue;
@@ -2977,7 +2979,7 @@ a:focus {
 			margin: 0px;
 		}
 	}
-	.text-block{
+	.svg-walk-path .text-block{
 		right: 15%!important;
 		left: auto!important;
 	}
