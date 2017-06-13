@@ -2693,6 +2693,12 @@ a:focus {
   .svg-walk-path svg {
     width: 100%;
   }
+  .vacancy-info-block .item .content .subtitle {
+    font-size: 24px;
+  }
+  .vacancy-info-block .item {
+    padding: 30px;
+  }
 }
 @media (max-width: 769px) {
   .way-blocks-wrapper {
