@@ -2097,6 +2097,7 @@ a:focus {
 }
 .career-block {
   margin-top: 60px;
+  overflow: hidden;
 }
 #svgWrapper {
   margin-bottom: 60px;
