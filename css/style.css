@@ -1442,10 +1442,6 @@ footer .copyrights p a {
 .study-articles {
   margin-bottom: 60px;
 }
-.study-articles .row {
-  display: flex;
-  flex-wrap: wrap;
-}
 .study-articles .row .article:nth-child(1) .text {
   background-color: #3D8DCB;
 }
