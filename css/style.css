@@ -3178,4 +3178,11 @@ a:focus {
   .text-container .reccom span {
     font-size: 28px;
   }
+  .about-ui .about-arrow img {
+    width: 18px;
+    height: 18px;
+  }
+  .about-ui .about-dots-container div {
+    width: 36px;
+  }
 }
