@@ -2586,10 +2586,6 @@ a:focus {
   .vacancy-info-block .row .col {
     display: flex;
   }
-  .collages {
-    display: flex;
-    flex-wrap: wrap;
-  }
   .collages .collage {
     margin-bottom: 30px;
   }
