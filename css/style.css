@@ -2698,6 +2698,9 @@ a:focus {
   .about-slider .about-achivements .row {
     flex-wrap: wrap;
   }
+  .modal.big .modal-dialog {
+    width: 95%;
+  }
 }
 @media (max-width: 769px) {
   .way-blocks-wrapper {
@@ -2873,6 +2876,9 @@ a:focus {
   }
   .fail-block h1 {
     font-size: 19vw;
+  }
+  .modal.big .modal-dialog {
+    width: 95%;
   }
 }
 @media (max-width: 469px) {
@@ -3184,5 +3190,16 @@ a:focus {
   }
   .about-ui .about-dots-container div {
     width: 36px;
+  }
+  .modal.big .modal-dialog {
+    width: 95%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0px;
+  }
+  .modal.big .modal-content iframe {
+    height: 350px;
   }
 }
