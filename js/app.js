@@ -403,7 +403,7 @@ function scrollDude(){
 	if ($(window).width() > 1020){
 		counter_sc += 0.006;
 	} else {
-		counter_sc += 0.005;
+		counter_sc += 0.004;
 	}
  	if (parseInt(counter_sc,10) === 1) {
 		start_sc = false;
