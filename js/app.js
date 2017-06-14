@@ -186,7 +186,7 @@ $(document).ready(function(){
 
 	$('.point').each(function(){
 		var y = $(this)[0].getBBox().y + 40;
-		var x = $(this)[0].getBBox().x - (290/2);
+		var x = $(this)[0].getBBox().x - ($('#svgWrapper .career-text').width()/2.3);
 		$('#svgWrapper .svg-container').append('<div class="career-text" style="left:'+x+'px; top:'+y+'px;">'+
 			'<a href="#">Консультант</a>'+
 			'<p>- активный и целеустремленный специалист, владеющий навыками коммуникации, который занимается привлечением клиентов через «холодные звонки» и выстраивает с ними долгосрочные партнерские отношения</p>'+
@@ -403,7 +403,7 @@ function scrollDude(){
 	if ($(window).width() > 1020){
 		counter_sc += 0.006;
 	} else {
-		counter_sc += 0.004;
+		counter_sc += 0.002;
 	}
  	if (parseInt(counter_sc,10) === 1) {
 		start_sc = false;
