@@ -3081,7 +3081,8 @@ a:focus {
     height: 390px;
   }
   .hero-block.text-page .hero-bottom-text .breadcrumb li.active h1 {
-    font-size: 23px;
+    font-size: 20px;
+    line-height: 120%;
   }
   .text-container table {
     table-layout: auto;
@@ -3167,5 +3168,14 @@ a:focus {
   }
   .fail-block h1 {
     font-size: 42vw;
+  }
+  .text-container .doc span {
+    width: 75%;
+  }
+  .text-container .reccom img {
+    width: 30px;
+  }
+  .text-container .reccom span {
+    font-size: 28px;
   }
 }
