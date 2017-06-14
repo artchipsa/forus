@@ -2006,18 +2006,25 @@ footer .copyrights p a {
   padding-top: 200px;
 }
 .about-slider .about-achivements .row {
+  -webkit-display: flex;
+  -webkit-flex-wrap: wrap;
+  -webkit-align-items: center;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 .about-slider .about-achivements .col-lg-4 {
+  -webkit-display: flex;
+  -webkit-align-self: stretch;
   display: flex;
-  margin-bottom: 30px;
   align-self: stretch;
+  margin-bottom: 30px;
 }
 .about-slider .about-achivements .text {
   padding: 38px 12%;
   border: 2px solid #fff;
+  -webkit-display: flex;
+  -webkit-align-items: center;
   display: flex;
   align-items: center;
   width: 100%;
@@ -2696,12 +2703,15 @@ a:focus {
     width: 100%;
   }
   .about-slider .about-achivements .row {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 769px) {
   .way-blocks-wrapper {
     height: auto;
+    flex-wrap: wrap;
+  }
+  .about-slider .about-achivements .row {
     flex-wrap: wrap;
   }
   .main-vacancy {

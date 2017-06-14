@@ -2150,19 +2150,26 @@ footer{
 		padding: 0px 3%;
 		padding-top: 200px;
 		.row{
+			-webkit-display: flex;
+			-webkit-flex-wrap: wrap;
+			-webkit-align-items: center;
 			display: flex;
 			flex-wrap: wrap;
 			align-items: center;
 		}
 		.col-lg-4{
+			-webkit-display: flex;
+			-webkit-align-self: stretch;
 			display: flex;
-			margin-bottom: 30px;
 			align-self: stretch;
+			margin-bottom: 30px;
 
 		}
 		.text{
 			padding: 38px 12%;
 			border: 2px solid @white;
+			-webkit-display: flex;
+			-webkit-align-items: center;
 			display: flex;
 			align-items: center;
 			width: 100%;
@@ -2836,13 +2843,16 @@ a:focus {
 		width: 100%;
 	}
 	.about-slider .about-achivements .row{
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 	}
 }
 
 @media (max-width: 769px){
 	.way-blocks-wrapper{
 		height: auto;
+		flex-wrap: wrap;
+	}
+	.about-slider .about-achivements .row{
 		flex-wrap: wrap;
 	}
 	.main-vacancy{
