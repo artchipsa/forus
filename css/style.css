@@ -2006,31 +2006,18 @@ footer .copyrights p a {
   padding-top: 200px;
 }
 .about-slider .about-achivements .row {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  -webkit-flex-wrap: wrap;
-  -webkit-align-items: center;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 .about-slider .about-achivements .col-lg-4 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  -webkit-align-self: stretch;
   display: flex;
-  align-self: stretch;
   margin-bottom: 30px;
+  align-self: stretch;
 }
 .about-slider .about-achivements .text {
   padding: 38px 12%;
   border: 2px solid #fff;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  -webkit-align-items: center;
   display: flex;
   align-items: center;
   width: 100%;
