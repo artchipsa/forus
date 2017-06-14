@@ -2006,7 +2006,9 @@ footer .copyrights p a {
   padding-top: 200px;
 }
 .about-slider .about-achivements .row {
-  -webkit-display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   -webkit-flex-wrap: wrap;
   -webkit-align-items: center;
   display: flex;
@@ -2014,7 +2016,9 @@ footer .copyrights p a {
   align-items: center;
 }
 .about-slider .about-achivements .col-lg-4 {
-  -webkit-display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   -webkit-align-self: stretch;
   display: flex;
   align-self: stretch;
@@ -2023,7 +2027,9 @@ footer .copyrights p a {
 .about-slider .about-achivements .text {
   padding: 38px 12%;
   border: 2px solid #fff;
-  -webkit-display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   -webkit-align-items: center;
   display: flex;
   align-items: center;
