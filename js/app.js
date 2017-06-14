@@ -240,7 +240,7 @@ $(document).ready(function(){
 				var y = $(this)[0].getBBox().y - ($('.text-block').eq(id).height());
 				$('.text-block').eq(id).css({'top': y});
 			} else if($(window).width() > 992) {
-				var y = $(this)[0].getBBox().y - ($('.text-block').eq(id).height()/1.65);
+				var y = $(this)[0].getBBox().y - ($('.text-block').eq(id).height()/1.25);
 				if (id==2){
 					$('.text-block').eq(id).css({'top': y-250});
 				} else {
