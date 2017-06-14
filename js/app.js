@@ -54,62 +54,70 @@ $(document).ready(function(){
 
 	});
 
+	if ($('.news-container.owl-carousel').length){
+		var mainNews = $('.news-container.owl-carousel');
+		mainNews.owlCarousel({
+			loop: true,
+			margin: 30,
+			items: 1
+		});
 
-	var mainNews = $('.news-container.owl-carousel');
-	mainNews.owlCarousel({
-		loop: true,
-		margin: 30,
-		items: 1
-	});
+		$('.news-header .arrow-container .prev').click(function(e) {
+			e.preventDefault();
+		    mainNews.trigger('prev.owl.carousel');
+		})
 
-	$('.news-header .arrow-container .prev').click(function(e) {
-		e.preventDefault();
-	    mainNews.trigger('prev.owl.carousel');
-	})
+		$('.news-header .arrow-container .next').click(function(e) {
+			e.preventDefault();
+		    mainNews.trigger('next.owl.carousel');
+		})
+	}
 
-	$('.news-header .arrow-container .next').click(function(e) {
-		e.preventDefault();
-	    mainNews.trigger('next.owl.carousel');
-	})
+	if ($('.moments-container').length){
+		var mainMoments = $('.moments-container');
+		mainMoments.owlCarousel({
+			loop: true,
+			margin: 30,
+			items: 1
+		});
 
-	var mainMoments = $('.moments-container');
-	mainMoments.owlCarousel({
-		loop: true,
-		margin: 30,
-		items: 1
-	});
+		$('.moments-header .arrow-container .prev').click(function(e) {
+			e.preventDefault();
+		    mainMoments.trigger('prev.owl.carousel');
+		})
 
-	$('.moments-header .arrow-container .prev').click(function(e) {
-		e.preventDefault();
-	    mainMoments.trigger('prev.owl.carousel');
-	})
+		$('.moments-header .arrow-container .next').click(function(e) {
+			e.preventDefault();
+		    mainMoments.trigger('next.owl.carousel');
+		})
+	}
 
-	$('.moments-header .arrow-container .next').click(function(e) {
-		e.preventDefault();
-	    mainMoments.trigger('next.owl.carousel');
-	})
+	if ($('.photo-container').length){
+		var photos = $('.photo-container');
+		photos.owlCarousel({
+			loop: true,
+			margin: 30,
+			items: 1
+		});
 
-	var photos = $('.photo-container');
-	photos.owlCarousel({
-		loop: true,
-		margin: 30,
-		items: 1
-	});
+		$('.photo-header .arrow-container .prev').click(function(e) {
+			e.preventDefault();
+		    photos.trigger('prev.owl.carousel');
+		})
 
-	$('.photo-header .arrow-container .prev').click(function(e) {
-		e.preventDefault();
-	    photos.trigger('prev.owl.carousel');
-	})
+		$('.photo-header .arrow-container .next').click(function(e) {
+			e.preventDefault();
+		    photos.trigger('next.owl.carousel');
+		})
+	}
 
-	$('.photo-header .arrow-container .next').click(function(e) {
-		e.preventDefault();
-	    photos.trigger('next.owl.carousel');
-	})
+	if ($('.vacancy-email .select2').length){
+		$('.vacancy-email .select2').select2({
+			placeholder: 'Все вакансии',
+			dropdownParent: $('.vacancy-email:visible')
+		})
+	}
 
-	$('.vacancy-email .select2').select2({
-		placeholder: 'Все вакансии',
-		dropdownParent: $('.vacancy-email:visible')
-	})
 
 	if ($('#map').length){
 		initMap();
@@ -388,7 +396,7 @@ function moveDude(id){
 	if (start){
 		dude.setAttribute("transform", "translate(" + 
 		(svg[id].getPointAtLength(counter * straightLength).x - 50)  + "," +
-		(svg[id].getPointAtLength(counter * straightLength).y - parseInt(dude.height.animVal.value)) + ")");
+		(svg[id].getPointAtLength(counter * straightLength).y - parseInt(dude.height.animVal.value) + 20) + ")");
 		myReq = requestAnimationFrame(function(){
 			moveDude(id);
 		});

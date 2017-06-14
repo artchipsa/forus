@@ -1,31 +1,31 @@
 @font-face {
   font-family: Raleway;
   src: url('../fonts/RalewayRegular.ttf');
-  src: url('../fonts/RalewayRegular.woff2') format('woff2'), url('../fonts/RalewayRegular.woff') format('woff'), url('../fonts/RalewayRegular.otf') format('opentype'), url('../fonts/RalewayRegular.eot') format('embedded-opentype');
+  src: url('../fonts/RalewayRegular.woff2') format('woff2'), url('../fonts/RalewayRegular.woff') format('woff');
   font-weight: 400;
 }
 @font-face {
   font-family: Raleway;
   src: url('../fonts/RalewayBold.ttf');
-  src: url('../fonts/RalewayBold.woff2') format('woff2'), url('../fonts/RalewayBold.woff') format('woff'), url('../fonts/RalewayBold.otf') format('opentype'), url('../fonts/RalewayBold.eot') format('embedded-opentype');
+  src: url('../fonts/RalewayBold.woff2') format('woff2'), url('../fonts/RalewayBold.woff') format('woff');
   font-weight: 800;
 }
 @font-face {
   font-family: Nova;
   src: url('../fonts/ProximaNovaRegular.ttf');
-  src: url('../fonts/ProximaNovaRegular.woff2') format('woff2'), url('../fonts/ProximaNovaRegular.woff') format('woff'), url('../fonts/ProximaNovaRegular.otf') format('opentype'), url('../fonts/ProximaNovaRegular.eot') format('embedded-opentype');
+  src: url('../fonts/ProximaNovaRegular.woff2') format('woff2'), url('../fonts/ProximaNovaRegular.woff') format('woff');
   font-weight: 400;
 }
 @font-face {
   font-family: Nova;
   src: url('../fonts/ProximaNovaLight.ttf');
-  src: url('../fonts/ProximaNovaLight.woff2') format('woff2'), url('../fonts/ProximaNovaLight.woff') format('woff'), url('../fonts/ProximaNovaLight.otf') format('opentype'), url('../fonts/ProximaNovaLight.eot') format('embedded-opentype');
+  src: url('../fonts/ProximaNovaLight.woff2') format('woff2'), url('../fonts/ProximaNovaLight.woff') format('woff');
   font-weight: 200;
 }
 @font-face {
   font-family: Nova;
   src: url('../fonts/ProximaNovaBold.ttf');
-  src: url('../fonts/ProximaNovaBold.woff2') format('woff2'), url('../fonts/ProximaNovaBold.woff') format('woff'), url('../fonts/ProximaNovaBold.otf') format('opentype'), url('../fonts/ProximaNovaBold.eot') format('embedded-opentype');
+  src: url('../fonts/ProximaNovaBold.woff2') format('woff2'), url('../fonts/ProximaNovaBold.woff') format('woff');
   font-weight: 800;
 }
 body {
@@ -578,6 +578,7 @@ header .phone a span {
   max-height: 102px;
   margin-bottom: 22px;
   width: 90%;
+  height: 90%;
 }
 .reason-block .item .reason-card .content span {
   font-size: 20px;
