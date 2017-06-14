@@ -283,11 +283,10 @@ $(document).ready(function(){
 					});
 
 					$('.turn').each(function(){
-						if ($(dude_sc).offset().top >= $(this).offset().top - 200 && $(this).hasClass('inOrder')){
+						if ($(dude_sc).offset().top >= $(this).offset().top - 300 && $(this).hasClass('inOrder')){
 							deg += 180;
-							alert('ALO, EGDE, TI CHO?');
 							$(this).removeClass('inOrder');
-							$('#dude image.img-start').attr('style', 'transform: rotate3d(0,1,0,'+deg+'deg);')
+							$('#dude image.img-start').attr('style', 'transform: rotate3d(0,1,0,'+deg+'deg); -ms-transform: rotate3d(0,1,0,'+deg+'deg);')
 						}
 					})
 				}
