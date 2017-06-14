@@ -414,7 +414,7 @@ function scrollDude(){
 	if (start_sc){
 		dude_sc.setAttribute("transform", "translate(" + 
 		(svg_sc[0].getPointAtLength(counter_sc * path).x - 50)  + "," +
-		(svg_sc[0].getPointAtLength(counter_sc * path).y - parseInt(dude_sc.attributes.height.value)) + ")");
+		(svg_sc[0].getPointAtLength(counter_sc * path).y - parseInt(dude_sc.attributes.height.value) -50) + ")");
 	} else {
 		$('.img-start').fadeOut(100, function(){
 			$('.img-finish').fadeIn(100);
