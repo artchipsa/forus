@@ -284,9 +284,15 @@ $(document).ready(function(){
 
 					$('.turn').each(function(){
 						if ($(dude_sc).offset().top >= $(this).offset().top - 300 && $(this).hasClass('inOrder')){
-							deg += 180;
+							// Решение для нормальных браузеров
+							/*deg += 180;
 							$(this).removeClass('inOrder');
-							$('#dude image.img-start').attr('style', 'transform: rotate3d(0,1,0,'+deg+'deg); -webkit-transform: rotate3d(0,1,0,'+deg+'deg);')
+							$('#dude image.img-start').attr('style', 'transform: rotate3d(0,1,0,'+deg+'deg);')*/
+						
+							// Решение, чтобы работало в хуевых
+							console.log(1);
+							$(this).removeClass('inOrder');
+							$('.img-start, .img-start-invert').toggleClass('visible');
 						}
 					})
 				}
@@ -424,8 +430,8 @@ function scrollDude(){
 		(svg_sc[0].getPointAtLength(counter_sc * path).x - 50)  + "," +
 		(svg_sc[0].getPointAtLength(counter_sc * path).y - parseInt(dude_sc.attributes.height.value) -50) + ")");
 	} else {
-		$('.img-start').fadeOut(100, function(){
-			$('.img-finish').fadeIn(100);
+		$('.img-start, .img-start-invert').fadeOut(100, function(){
+			$('.img-finish').fadeIn(200);
 		});
 	}
 }

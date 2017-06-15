@@ -2355,6 +2355,14 @@ a:focus {
   font-size: 16px;
   margin-bottom: 50px;
 }
+.img-start,
+.img-start-invert {
+  display: none;
+}
+.img-start.visible,
+.img-start-invert.visible {
+  display: block;
+}
 .img-finish {
   display: none;
 }
