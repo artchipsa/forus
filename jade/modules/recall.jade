@@ -1,0 +1,17 @@
+.modal.fade.recall(tabindex="-1" role="dialog")
+	.modal-dialog(role="document")
+		.modal-content
+			.close.menu(data-dismiss="modal" aria-label="Close")
+				a(href="#").active
+					p Закрыть
+						.burger
+							span
+			.recall-body
+				h2 Укажите ваши данные
+				form
+					.form-group
+						input(type="text", name="name", placeholder="Ваше имя")
+					.form-group
+						input(type="text", name="email", placeholder="Ваша почта")
+					.form-group
+						input.btn.default(type="submit", value="Откликнуться")

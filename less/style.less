@@ -547,6 +547,21 @@ header{
 .reason-block{
 	margin-top: 70px;
 	margin-bottom: 80px;
+	.title{
+		font-size: 36px;
+	}
+	&.no-rotate{
+		.reason-card{
+			cursor: default;
+		}
+		.item{
+			&:hover{
+				.reason-card{
+					transform: rotate(0deg);
+				}
+			}
+		}
+	}
 	.item{
 		perspective: 1000px;
 		&:hover{
@@ -848,7 +863,7 @@ header{
 		}
 		&:nth-child(2){
 			.item{
-				background-color: darken(@yellow, 10%);
+				background-color: #cb4b2c;
 			}
 		}
 	}
@@ -1281,12 +1296,15 @@ footer{
 			list-style: none;
 			margin-bottom: 22px;
 			li{
+				margin-right: 15px;
+				&:last-child{
+					margin-right: 0px;
+				}
 				a{
 					display: inline-block;
 					padding: 6px;
 					border: 2px solid @blue-gray;
 					transition: all .35s;
-					margin-right: 15px;
 					&:hover{
 						border-color: @dark-blue;
 					}
@@ -1563,7 +1581,10 @@ footer{
 			position: relative;
 			&:hover{
 				.text{
-					height: 30%;
+					height: 50%;
+					ul, p{
+						opacity: 1;
+					}
 				}
 			}
 			.img-block{
@@ -1585,14 +1606,32 @@ footer{
 				transition: all .35s;
 				position: absolute;
 				bottom: 0px;
+				overflow: hidden;
 				span{
 					font-family: Nova;
 					font-weight: 800;
-					font-size: 2.8vw;
+					font-size: 2.5vw;
 					color: @white;
 					line-height: 135%;
 				    width: 80%;
     				display: inline-block;
+    				margin-bottom: 5%;
+				}
+				ul{
+					opacity: 0;
+					padding-top: 0px;
+					transition: all .15s;
+					li{
+						color: #fff;
+						font-size: 20px;
+						margin-bottom: 12px;
+					}
+				}
+				p{
+					opacity: 0;
+					transition: all .15s;
+					color: #fff;
+					font-size: 23px;
 				}
 			}
 		}
@@ -1628,10 +1667,16 @@ footer{
 				span{
 					font-family: Nova;
 					font-size: 2.8vw;
+					line-height: 120%;
 					font-weight: 800;
+					margin-bottom: 20px;
 					color: @white;
 					width: 90%;
 					display: inline-block;
+				}
+				p{
+					font-size: 16px;
+					color: #fff;
 				}
 			}
 		}
@@ -2018,6 +2063,8 @@ footer{
 	.item{
 		height: 100vh;
 		position: relative;
+		background-position: center;
+		background-size: cover;
 		.content{
 			z-index: 1;
 			position: relative;
@@ -2531,6 +2578,58 @@ a:focus {
 	display: none;
 }
 
+.recall{
+	.close{
+		opacity: 1;
+		p{
+			font-weight: 400;
+		}
+	}
+	.modal-dialog{
+		width: 520px;
+		padding: 30px;
+		background-color: @email;
+		position: relative;
+	}
+	.recall-body{
+		background-color: @email;
+		h2{
+			margin-bottom: 40px;
+		}
+		.form-group{
+			width: 100%;
+			margin-bottom: 30px;
+			input[type="text"]{
+				width: 75%;
+			    background-color: transparent;
+			    border: none;
+			    border-bottom: 2px solid #9FA3AF;
+			    border-radius: 0px;
+			    padding: 16px 18px;
+			    outline: none;
+			}
+			input[type="submit"]{
+			    border: 2px solid #9FA3AF;
+			    text-transform: uppercase;
+			    padding: 18px 28px;
+			    color: #9FA3AF;
+			    font-family: Nova;
+			    font-size: 15px;
+			    font-weight: 800;
+			    line-height: 100%;
+			    background-color: transparent;
+			    transition: all .35s;
+			    &:hover{
+		    	    color: #034EA1;
+				    border-color: #034EA1;
+				    background-color: #fff;
+			    }
+			}
+		}
+	}
+}
+
+
 .st0{fill:none;stroke:#FAA61A;stroke-width:10;}
 .st1{opacity:0.3;fill:none;stroke:#0C4DA2;stroke-width:2;enable-background:new;}
 .st2{fill:#0C4DA2;}
@@ -2592,7 +2691,7 @@ a:focus {
 		left: 20px;
 	}
 	footer .socials ul{
-		padding-left: 15px;
+		padding-left: 0px;
 	}
 	.hero-block.text-page .hero-bottom-text .breadcrumb li.active h1{
 		font-size: 32px;
@@ -2667,6 +2766,9 @@ a:focus {
 	}
 	.fail-block{
 		padding-top: 150px;
+	}
+	.title{
+		word-break: break-word;
 	}
 }
 
@@ -2850,9 +2952,32 @@ a:focus {
 	.modal.big .modal-dialog{
 		width: 95%;
 	}
+	.study-articles .row .item .text ul li{
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+	.study-articles .row .item .text p{
+		font-size: 18px;
+	}
+	.study-articles .row .item:hover .text{
+		height: 65%
+	}
+	.about-slider .about-value .subtext{
+		width: 80%;
+		margin-bottom: 20px;
+	}
+	.about-slider .item h2{
+		margin-bottom: 22px;
+	}
+	footer .socials ul{
+		padding-left: 15px;
+	}
 }
 
 @media (max-width: 769px){
+	footer .socials ul{
+		padding-left: 0px;
+	}
 	.way-blocks-wrapper{
 		height: auto;
 		flex-wrap: wrap;
@@ -2984,7 +3109,7 @@ a:focus {
 		width: 78%;
 	}
 	.about-slider .item h2{
-		font-size: 6vw;
+		font-size: 5vw;
 	}
 	.about-slider .about-achivements .text{
 		min-height: 185px;
@@ -3029,6 +3154,16 @@ a:focus {
 	}
 	.modal.big .modal-dialog{
 		width: 95%;
+	}
+	.study-articles .row .item .text span{
+		font-size: 5.5vw;
+	}
+	.study-articles .row .item .text ul li{
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	.study-articles .row .item .text p{
+		font-size: 22px;
 	}
 }
 
@@ -3371,5 +3506,12 @@ a:focus {
 	}
 	#svgWrapper .career-text{
 		width: 286px;
+	}
+	.study-articles .row .item .text ul li{
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+	.study-articles .row .item .text p{
+		font-size: 18px;
 	}
 }

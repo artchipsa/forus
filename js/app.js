@@ -3,7 +3,10 @@ var map;
 var faded = [];
 $(document).ready(function(){
 
-
+/*	$('.recall .close').click(function(){
+		$('.recall').modal('hide');
+	})
+*/
 	// main-hover-elems
 
 	$('.way-blocks-wrapper .item').mouseenter(function(){

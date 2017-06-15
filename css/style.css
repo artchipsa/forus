@@ -45,7 +45,7 @@ body {
 .modal-window.menu-modal {
   transition: all .35s;
   transform: translateY(-200%);
-  background-color: #433793;
+  background-color: #034EA1;
   padding-top: 170px;
 }
 .modal-window.menu-modal.open {
@@ -77,7 +77,7 @@ body {
   padding-bottom: 2%;
 }
 .modal-window.menu-modal ul li:hover a {
-  color: #433793;
+  color: #034EA1;
   text-decoration: none;
 }
 .modal-window.menu-modal ul li a {
@@ -345,7 +345,7 @@ header .phone a span {
   transition: all .35s ease;
 }
 .main-vacancy a.item:hover {
-  background-color: #433793;
+  background-color: #034EA1;
   text-decoration: none;
 }
 .main-vacancy a.item:hover .name {
@@ -523,6 +523,15 @@ header .phone a span {
 .reason-block {
   margin-top: 70px;
   margin-bottom: 80px;
+}
+.reason-block .title {
+  font-size: 36px;
+}
+.reason-block.no-rotate .reason-card {
+  cursor: default;
+}
+.reason-block.no-rotate .item:hover .reason-card {
+  transform: rotate(0deg);
 }
 .reason-block .item {
   perspective: 1000px;
@@ -711,23 +720,23 @@ header .phone a span {
 }
 .vacancy-block .vacancy-city-content .section .vacancy-item:hover {
   background-color: transparent;
-  border-color: #433793;
+  border-color: #034EA1;
 }
 .vacancy-block .vacancy-city-content .section .vacancy-item:hover .img-block {
   opacity: 0;
 }
 .vacancy-block .vacancy-city-content .section .vacancy-item:hover .tag {
-  color: #433793;
+  color: #034EA1;
 }
 .vacancy-block .vacancy-city-content .section .vacancy-item:hover .tag:after {
-  background-color: #433793;
+  background-color: #034EA1;
   transition: all .35s;
 }
 .vacancy-block .vacancy-city-content .section .vacancy-item:hover .name {
   transform: translateY(0px);
 }
 .vacancy-block .vacancy-city-content .section .vacancy-item:hover .name span {
-  color: #433793;
+  color: #034EA1;
 }
 .vacancy-block .vacancy-city-content .section .vacancy-item:hover .name a {
   display: inline-block;
@@ -779,15 +788,15 @@ header .phone a span {
   font-size: 14px;
   font-family: Nova;
   font-weight: 800;
-  color: #433793;
-  border: 2px solid #433793;
+  color: #034EA1;
+  border: 2px solid #034EA1;
   display: inline-block;
   transition: all .35s;
   background-color: transparent;
 }
 .vacancy-block .vacancy-city-content .section .vacancy-item .name a:hover {
   text-decoration: none;
-  background-color: #433793;
+  background-color: #034EA1;
   color: #fff;
 }
 .vacancy-info-block {
@@ -797,7 +806,7 @@ header .phone a span {
   background-color: #2d72a8;
 }
 .vacancy-info-block .col:nth-child(2) .item {
-  background-color: #d98a06;
+  background-color: #cb4b2c;
 }
 .vacancy-info-block .item {
   padding: 30px;
@@ -889,8 +898,8 @@ header .phone a span {
   transition: all .35s;
 }
 .vacancy-email input[type="submit"]:hover {
-  color: #433793;
-  border-color: #433793;
+  color: #034EA1;
+  border-color: #034EA1;
   background-color: #fff;
 }
 .vacancy-email select {
@@ -964,7 +973,7 @@ header .phone a span {
   transition: all .35s ease;
 }
 .arrow-container a:hover {
-  border-color: #433793;
+  border-color: #034EA1;
 }
 .arrow-container a img {
   width: 26px;
@@ -1001,23 +1010,23 @@ header .phone a span {
   bottom: 40px;
 }
 .news-block .new.all {
-  background-color: #433793;
+  background-color: #034EA1;
 }
 .news-block .new.all .date {
   top: 58px;
 }
 .news-block .new.all.invert {
   background-color: #fff;
-  border: 2px solid #433793;
+  border: 2px solid #034EA1;
 }
 .news-block .new.all.invert .date {
-  color: #433793;
+  color: #034EA1;
 }
 .news-block .new.all.invert .date:after {
-  background-color: #433793;
+  background-color: #034EA1;
 }
 .news-block .new.all.invert .name {
-  color: #433793;
+  color: #034EA1;
 }
 .news-block .new:hover {
   text-decoration: none;
@@ -1200,15 +1209,20 @@ footer .socials ul {
   list-style: none;
   margin-bottom: 22px;
 }
+footer .socials ul li {
+  margin-right: 15px;
+}
+footer .socials ul li:last-child {
+  margin-right: 0px;
+}
 footer .socials ul li a {
   display: inline-block;
   padding: 6px;
   border: 2px solid #9FA3AF;
   transition: all .35s;
-  margin-right: 15px;
 }
 footer .socials ul li a:hover {
-  border-color: #433793;
+  border-color: #034EA1;
 }
 footer .socials ul li a img {
   width: 22px;
@@ -1309,7 +1323,7 @@ footer .copyrights p a {
   width: 44px;
 }
 .vacancy .vacancy-body .circumstances-block .item.call {
-  background-color: #433793;
+  background-color: #034EA1;
   padding: 34px 42px;
 }
 .vacancy .vacancy-body .circumstances-block .item.call .line {
@@ -1405,7 +1419,7 @@ footer .copyrights p a {
 }
 .btn.gray:hover {
   color: #fff;
-  background-color: #433793;
+  background-color: #034EA1;
 }
 .btn.default {
   color: #fff;
@@ -1413,7 +1427,7 @@ footer .copyrights p a {
   background-color: transparent;
 }
 .btn.default:hover {
-  color: #433793;
+  color: #034EA1;
   background-color: #fff;
 }
 .vacancy .vacancy-email {
@@ -1458,7 +1472,11 @@ footer .copyrights p a {
   position: relative;
 }
 .study-articles .row .item:hover .text {
-  height: 30%;
+  height: 50%;
+}
+.study-articles .row .item:hover .text ul,
+.study-articles .row .item:hover .text p {
+  opacity: 1;
 }
 .study-articles .row .item .img-block {
   position: relative;
@@ -1479,15 +1497,33 @@ footer .copyrights p a {
   transition: all .35s;
   position: absolute;
   bottom: 0px;
+  overflow: hidden;
 }
 .study-articles .row .item .text span {
   font-family: Nova;
   font-weight: 800;
-  font-size: 2.8vw;
+  font-size: 2.5vw;
   color: #fff;
   line-height: 135%;
   width: 80%;
   display: inline-block;
+  margin-bottom: 5%;
+}
+.study-articles .row .item .text ul {
+  opacity: 0;
+  padding-top: 0px;
+  transition: all .15s;
+}
+.study-articles .row .item .text ul li {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.study-articles .row .item .text p {
+  opacity: 0;
+  transition: all .15s;
+  color: #fff;
+  font-size: 23px;
 }
 .hobbies-articles {
   margin-bottom: 30px;
@@ -1522,10 +1558,16 @@ footer .copyrights p a {
 .hobbies-articles .hobbies .item .text span {
   font-family: Nova;
   font-size: 2.8vw;
+  line-height: 120%;
   font-weight: 800;
+  margin-bottom: 20px;
   color: #fff;
   width: 90%;
   display: inline-block;
+}
+.hobbies-articles .hobbies .item .text p {
+  font-size: 16px;
+  color: #fff;
 }
 .hobbies-articles .hobby-specials {
   display: flex;
@@ -1547,7 +1589,7 @@ footer .copyrights p a {
   font-size: 32px;
   font-family: Nova;
   font-weight: 800;
-  color: #433793;
+  color: #034EA1;
   margin-bottom: 20px;
   text-transform: uppercase;
   width: 100%;
@@ -1560,7 +1602,7 @@ footer .copyrights p a {
 }
 .hobbies-articles .hobby-specials .item p {
   font-size: 16px;
-  color: #433793;
+  color: #034EA1;
   margin-bottom: 40px;
   width: 100%;
 }
@@ -1797,8 +1839,8 @@ footer .copyrights p a {
   transition: all .35s;
 }
 .about-ui .about-arrow:hover {
-  background-color: #433793;
-  border-color: #433793;
+  background-color: #034EA1;
+  border-color: #034EA1;
 }
 .about-ui .about-arrow img {
   width: 26px;
@@ -1874,6 +1916,8 @@ footer .copyrights p a {
 .about-slider .item {
   height: 100vh;
   position: relative;
+  background-position: center;
+  background-size: cover;
 }
 .about-slider .item .content {
   z-index: 1;
@@ -1946,8 +1990,8 @@ footer .copyrights p a {
 }
 .about-slider .about-video .content .right-text .button-block:hover .text,
 .about-slider .about-video .content .right-text .button-block:hover .play {
-  background-color: #433793;
-  border-color: #433793;
+  background-color: #034EA1;
+  border-color: #034EA1;
 }
 .about-slider .about-video .content .right-text .button-block .text {
   border: 2px solid #fff;
@@ -2227,8 +2271,8 @@ a:focus {
   transition: all .35s;
 }
 .career-bottom-block .col-xs-12 .item .text a.default:hover {
-  color: #433793;
-  border-color: #433793;
+  color: #034EA1;
+  border-color: #034EA1;
   background-color: #fff;
 }
 .course-block {
@@ -2366,6 +2410,54 @@ a:focus {
 .img-finish {
   display: none;
 }
+.recall .close {
+  opacity: 1;
+}
+.recall .close p {
+  font-weight: 400;
+}
+.recall .modal-dialog {
+  width: 520px;
+  padding: 30px;
+  background-color: #EDEFF7;
+  position: relative;
+}
+.recall .recall-body {
+  background-color: #EDEFF7;
+}
+.recall .recall-body h2 {
+  margin-bottom: 40px;
+}
+.recall .recall-body .form-group {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.recall .recall-body .form-group input[type="text"] {
+  width: 75%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #9FA3AF;
+  border-radius: 0px;
+  padding: 16px 18px;
+  outline: none;
+}
+.recall .recall-body .form-group input[type="submit"] {
+  border: 2px solid #9FA3AF;
+  text-transform: uppercase;
+  padding: 18px 28px;
+  color: #9FA3AF;
+  font-family: Nova;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 100%;
+  background-color: transparent;
+  transition: all .35s;
+}
+.recall .recall-body .form-group input[type="submit"]:hover {
+  color: #034EA1;
+  border-color: #034EA1;
+  background-color: #fff;
+}
 .st0 {
   fill: none;
   stroke: #FAA61A;
@@ -2455,7 +2547,7 @@ a:focus {
     left: 20px;
   }
   footer .socials ul {
-    padding-left: 15px;
+    padding-left: 0px;
   }
   .hero-block.text-page .hero-bottom-text .breadcrumb li.active h1 {
     font-size: 32px;
@@ -2530,6 +2622,9 @@ a:focus {
   }
   .fail-block {
     padding-top: 150px;
+  }
+  .title {
+    word-break: break-word;
   }
 }
 @media (max-width: 1025px) {
@@ -2711,8 +2806,31 @@ a:focus {
   .modal.big .modal-dialog {
     width: 95%;
   }
+  .study-articles .row .item .text ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .study-articles .row .item .text p {
+    font-size: 18px;
+  }
+  .study-articles .row .item:hover .text {
+    height: 65%;
+  }
+  .about-slider .about-value .subtext {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .about-slider .item h2 {
+    margin-bottom: 22px;
+  }
+  footer .socials ul {
+    padding-left: 15px;
+  }
 }
 @media (max-width: 769px) {
+  footer .socials ul {
+    padding-left: 0px;
+  }
   .way-blocks-wrapper {
     height: auto;
     flex-wrap: wrap;
@@ -2845,7 +2963,7 @@ a:focus {
     width: 78%;
   }
   .about-slider .item h2 {
-    font-size: 6vw;
+    font-size: 5vw;
   }
   .about-slider .about-achivements .text {
     min-height: 185px;
@@ -2889,6 +3007,16 @@ a:focus {
   }
   .modal.big .modal-dialog {
     width: 95%;
+  }
+  .study-articles .row .item .text span {
+    font-size: 5.5vw;
+  }
+  .study-articles .row .item .text ul li {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .study-articles .row .item .text p {
+    font-size: 22px;
   }
 }
 @media (max-width: 469px) {
@@ -3232,5 +3360,12 @@ a:focus {
   }
   #svgWrapper .career-text {
     width: 286px;
+  }
+  .study-articles .row .item .text ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .study-articles .row .item .text p {
+    font-size: 18px;
   }
 }
