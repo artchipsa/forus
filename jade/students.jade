@@ -15,8 +15,9 @@ body
 	include modules/header.jade
 	
 	.hero-block
-		.img-block.students(style="background-image: url(img/prof_hero.jpg)")
-		.img-block.proffs
+		.img-block.students(style="background-image: url(img/stud_hero.jpg)")
+			.gradient-overlay
+		.img-block.proffs(style="background-image: url(img/prof_hero.jpg)")
 			.gradient-overlay
 		.hero-bottom-text
 			ol.breadcrumb
@@ -35,7 +36,7 @@ body
 				.reason-block
 					.row
 						.col-lg-2.col-md-4.col-sm-4.col-xs-12.item.vcenter
-							h2.title Причины стать частью «Форуса»
+							h2.title Причины стать частью «Форус»
 						.col-lg-2.col-md-4.col-sm-4.col-xs-12.item.vcenter
 							.reason-card
 								.content.front
@@ -352,9 +353,9 @@ body
 								.item
 									.row
 										.col-lg-6.col-md-6.col-sm-6.col-xs-12
-											.img-block
+											.img-block(style="background-image: url(img/vi4.jpg)")
 												.gradient-overlay
-												img(src="img/vi4.jpg", alt="")
+												//- img(src="img/vi4.jpg", alt="")
 										.col-lg-6.col-md-6.col-sm-6.col-xs-12
 											.content
 												h3.subtitle Стажировка и адаптация
@@ -368,9 +369,9 @@ body
 								.item
 									.row
 										.col-lg-6.col-md-6.col-sm-6.col-xs-12
-											.img-block
+											.img-block(style="background-image: url(img/vi3.jpg)")
 												.gradient-overlay
-												img(src="img/vi3.jpg", alt="")
+												//- img(src="img/vi3.jpg", alt="")
 										.col-lg-6.col-md-6.col-sm-6.col-xs-12
 											.content
 												h3.subtitle Карьера

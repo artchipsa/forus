@@ -30,6 +30,16 @@ $(document).ready(function(){
 	});
 
 
+	$('.vacancy-switch a').click(function(){
+
+		var section = $(this).attr('aria-controls');
+		$('.hero-block .img-block').fadeOut(300, function(){
+			$('.'+section+'').fadeIn(300);
+		});
+
+	});
+
+
 	// Vacancy custom tabs 
 
 	doc.on('click', '.vacancy-items:visible .item', function(e){
@@ -199,7 +209,7 @@ $(document).ready(function(){
 		var y = $(this)[0].getBBox().y + 40;
 		var x = $(this)[0].getBBox().x - ($('#svgWrapper .career-text').width()/2.3);
 		$('#svgWrapper .svg-container').append('<div class="career-text" style="left:'+x+'px; top:'+y+'px;">'+
-			'<a href="#">Консультант</a>'+
+			'<span>Консультант</span>'+
 			'<p>- активный и целеустремленный специалист, владеющий навыками коммуникации, который занимается привлечением клиентов через «холодные звонки» и выстраивает с ними долгосрочные партнерские отношения</p>'+
 			'</div>');
 	});

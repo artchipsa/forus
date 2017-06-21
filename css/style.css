@@ -341,7 +341,7 @@ header .phone a span {
 }
 .main-vacancy a.item {
   background-color: #fff;
-  padding: 1.5% 2%;
+  padding: 25px 2%;
   transition: all .35s ease;
 }
 .main-vacancy a.item:hover {
@@ -427,6 +427,9 @@ header .phone a span {
   top: 0px;
   background-position: center;
   background-size: cover;
+}
+.hero-block .img-block:nth-child(2) {
+  display: none;
 }
 .hero-block .gradient-overlay {
   opacity: 0.75;
@@ -539,6 +542,21 @@ header .phone a span {
 .reason-block .item:hover .reason-card {
   transform: rotateY(180deg);
 }
+.reason-block .item:nth-child(2) .back {
+  background-color: #3e8ecc;
+}
+.reason-block .item:nth-child(3) .back {
+  background-color: #3ebeb8;
+}
+.reason-block .item:nth-child(4) .back {
+  background-color: #fbb034;
+}
+.reason-block .item:nth-child(5) .back {
+  background-color: #3e8ecc;
+}
+.reason-block .item:nth-child(6) .back {
+  background-color: #ea5a26;
+}
 .reason-block .item .reason-card {
   width: 100%;
   height: 100%;
@@ -556,7 +574,6 @@ header .phone a span {
   padding: 50px;
   position: absolute;
   transform: rotateY(180deg);
-  background-color: #fff;
 }
 .reason-block .item .reason-card .back span {
   font-size: 20px;
@@ -564,8 +581,12 @@ header .phone a span {
   font-weight: 400;
   line-height: 120%;
   display: inline-block;
-  width: 100%;
+  width: 80%;
   word-wrap: break-word;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .reason-block .item .reason-card .back,
 .reason-block .item .reason-card .front {
@@ -590,7 +611,7 @@ header .phone a span {
   height: 90%;
 }
 .reason-block .item .reason-card .content span {
-  font-size: 20px;
+  font-size: 19px;
   font-family: Nova;
   font-weight: 400;
   line-height: 120%;
@@ -814,6 +835,9 @@ header .phone a span {
 .vacancy-info-block .item .img-block {
   overflow: hidden;
   position: relative;
+  min-height: 388px;
+  background-position: center;
+  background-size: cover;
 }
 .vacancy-info-block .item .img-block img {
   min-width: 100%;
@@ -827,7 +851,7 @@ header .phone a span {
 }
 .vacancy-info-block .item .content .subtitle {
   margin-top: 0px;
-  font-size: 32px;
+  font-size: 2vw;
   font-family: Nova;
   font-weight: 800;
   color: #fff;
@@ -1589,7 +1613,7 @@ footer .copyrights p a {
   font-size: 32px;
   font-family: Nova;
   font-weight: 800;
-  color: #034EA1;
+  color: #222;
   margin-bottom: 20px;
   text-transform: uppercase;
   width: 100%;
@@ -1602,7 +1626,7 @@ footer .copyrights p a {
 }
 .hobbies-articles .hobby-specials .item p {
   font-size: 16px;
-  color: #034EA1;
+  color: #222;
   margin-bottom: 40px;
   width: 100%;
 }
@@ -2079,7 +2103,7 @@ footer .copyrights p a {
 }
 .about-slider .about-achivements p span {
   font-weight: 800;
-  font-size: 64px;
+  font-size: 4vw;
 }
 .about-slider .forus .forus-title {
   color: #fff;
@@ -2162,7 +2186,7 @@ a:focus {
 #svgWrapper .svg-container {
   position: relative;
   transform: translateX(0px);
-  cursor: url(../img/Cursor.svg), pointer;
+  cursor: url(../img/Cursor.svg) 19 5, auto;
 }
 #svgWrapper svg {
   overflow: visible;
@@ -2184,7 +2208,7 @@ a:focus {
 #svgWrapper .career-text:first-child p {
   display: block;
 }
-#svgWrapper .career-text a {
+#svgWrapper .career-text span {
   font-size: 23px;
   font-family: Nova;
   font-weight: 800;
@@ -2595,7 +2619,7 @@ a:focus {
     font-size: 22px;
   }
   .about-slider .about-achivements p span {
-    font-size: 50px;
+    font-size: 3.5vw;
   }
   .growth .name {
     font-size: 5vw!important;
@@ -2625,6 +2649,24 @@ a:focus {
   }
   .title {
     word-break: break-word;
+  }
+  .vacancy-info-block .item .img-block {
+    min-height: 340px;
+  }
+  .vacancy-info-block .item .content ul li {
+    font-size: 16px;
+  }
+  .study-articles .row .item {
+    height: 560px;
+  }
+  .study-articles .row .item .text {
+    padding: 22px 40px;
+  }
+  .study-articles .row .item:hover .text {
+    height: 65%;
+  }
+  .about-slider .about-value .subtext {
+    width: 80%;
   }
 }
 @media (max-width: 1025px) {
