@@ -3,17 +3,27 @@ var map;
 var faded = [];
 $(document).ready(function(){
 
+
+	if(navigator.appName = 'Netscape'){
+		console.log(1);
+		$('.gradient-overlay').css({'background': 'linear-gradient(to right, rgba(241,102,38,0.5) 0%, rgba(212,186,82,0.5) 50%, rgba(36,153,207,0.5) 100%)'});
+	}
+
+
 /*	$('.recall .close').click(function(){
 		$('.recall').modal('hide');
 	})
 */
 	// main-hover-elems
 
-	$('.way-blocks-wrapper .item').mouseenter(function(){
-		$(this).width('45%');
-	}).mouseleave(function(){
-		$(this).width('33.33%');
-	})
+
+	if ($(window).width() > 991){
+		$('.way-blocks-wrapper .item').mouseenter(function(){
+			$(this).width('45%');
+		}).mouseleave(function(){
+			$(this).width('33.33%');
+		})
+	}
 
 	$('header .menu a').click(function(){
 		$(this).find('P').text(function(i, text){
@@ -205,16 +215,44 @@ $(document).ready(function(){
 		}, 1000)
 	});
 
-	$('.point').each(function(){
-		var y = $(this)[0].getBBox().y + 40;
-		var x = $(this)[0].getBBox().x - ($('#svgWrapper .career-text').width()/2.3);
-		$('#svgWrapper .svg-container').append('<div class="career-text" style="left:'+x+'px; top:'+y+'px;">'+
-			'<span>Консультант</span>'+
-			'<p>- активный и целеустремленный специалист, владеющий навыками коммуникации, который занимается привлечением клиентов через «холодные звонки» и выстраивает с ними долгосрочные партнерские отношения</p>'+
-			'</div>');
-	});
+	doc.on('click', '.career-text:visible', function(){
+		var id = $(this).index() - 2;
+		console.log("id", id);
+		$('.point[data-id='+id+']').click();
+		return false;
+	});	
 
 	if ($('.svg-container').length){
+
+		if ($(window).width() < 668){
+			$('#svgWrapper svg').attr('width', '1600px');
+			$('#svgWrapper svg').attr('height', '320px');
+			$('.point:visible').each(function(){
+				var id = $(this).data('id');
+				console.log("id", id);
+				var y = $(this).offset().top + 40;
+				var x = $(this).offset().left - ($('#svgWrapper .career-text').width()/2);				
+				$('#svgWrapper .svg-container').append('<div class="career-text generated" style="left:'+x+'px;">'+
+				'<a href="#">Консультант</a>'+
+				'<p>- активный и целеустремленный специалист, владеющий навыками коммуникации, который занимается привлечением клиентов через «холодные звонки» и выстраивает с ними долгосрочные партнерские отношения</p>'+
+				'</div>');
+				$('.career-text.generated').eq(id).offset({top: y});
+			});
+		} else {
+			$('.point').each(function(){
+				var y = $(this)[0].getBBox().y + 40;
+				var x = $(this)[0].getBBox().x - ($('#svgWrapper .career-text').width()/2.3);
+				
+				setTimeout(function(){
+					$('#svgWrapper .svg-container').append('<div class="career-text" style="left:'+x+'px; top:'+y+'px;">'+
+					'<a href="#">Консультант</a>'+
+					'<p>- активный и целеустремленный специалист, владеющий навыками коммуникации, который занимается привлечением клиентов через «холодные звонки» и выстраивает с ними долгосрочные партнерские отношения</p>'+
+					'</div>');
+				}, 1500);
+			});
+		}
+
+
 		var svgPan = $('.svg-container');
 		svgPan.width($('.svg-container svg').width());
 		var move;
@@ -250,7 +288,6 @@ $(document).ready(function(){
 
 	if($('.svg-walk-path').length){
 
-
 		$('.svg-walk-path .svg-cont:visible .point').each(function(){
 			if ($(window).width() > 1020){
 				var id = $(this).index()/2 - 1;
@@ -261,10 +298,13 @@ $(document).ready(function(){
 				var y = $(this)[0].getBBox().y - ($('.text-block').eq(id).height());
 				$('.text-block').eq(id).css({'top': y});
 			} else if($(window).width() > 992) {
-				var y = $(this)[0].getBBox().y - ($('.text-block').eq(id).height()/1.25);
+				var y = $(this)[0].getBBox().y - ($('.text-block').eq(id).height()*1.15);
 				if (id==2){
 					$('.text-block').eq(id).css({'top': y-250});
-				} else {
+				} else if (id==1) {
+					$('.text-block').eq(id).css({'top': y-100});
+
+				} else {	
 					$('.text-block').eq(id).css({'top': y});
 				}
 			} else {
@@ -296,7 +336,7 @@ $(document).ready(function(){
 					});
 
 					$('.turn').each(function(){
-						if ($(dude_sc).offset().top >= $(this).offset().top - 300 && $(this).hasClass('inOrder')){
+						if ($(dude_sc).offset().top >= $(this).offset().top - 300 && $(this).hasClass('inOrder') && $(window).width() > 769){
 							// Решение для нормальных браузеров
 							/*deg += 180;
 							$(this).removeClass('inOrder');
@@ -427,10 +467,11 @@ function moveDude(id){
 }
 
 function scrollDude(){
+	console.log(1);
 	if ($(window).width() > 1020){
 		counter_sc += 0.006;
 	} else {
-		counter_sc += 0.002;
+		counter_sc += 0.0045;
 	}
  	if (parseInt(counter_sc,10) === 1) {
 		start_sc = false;

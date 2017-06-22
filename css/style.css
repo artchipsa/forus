@@ -37,7 +37,7 @@ body {
   display: none;
 }
 .modal-window {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   z-index: 2;
@@ -538,9 +538,13 @@ header .phone a span {
 }
 .reason-block .item {
   perspective: 1000px;
+  transform-style: preserve-3d;
 }
-.reason-block .item:hover .reason-card {
-  transform: rotateY(180deg);
+.reason-block .item:hover .reason-card .back {
+  transform: rotateY(0deg);
+}
+.reason-block .item:hover .reason-card .front {
+  transform: translate(-50%, -50%) rotateY(180deg);
 }
 .reason-block .item:nth-child(2) .back {
   background-color: #3e8ecc;
@@ -564,16 +568,33 @@ header .phone a span {
   height: 282px;
   border: 2px solid #DFE1EF;
   position: relative;
+  cursor: pointer;
   transition: 0.6s;
   transform-style: preserve-3d;
-  cursor: pointer;
+  /* 			.back, .front{
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+} */
+}
+.reason-block .item .reason-card .front,
+.reason-block .item .reason-card .back {
+  backface-visibility: hidden;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.reason-block .item .reason-card .front {
+  z-index: 2;
 }
 .reason-block .item .reason-card .back {
   width: 100%;
   height: 100%;
   padding: 50px;
   position: absolute;
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 .reason-block .item .reason-card .back span {
   font-size: 20px;
@@ -584,24 +605,16 @@ header .phone a span {
   width: 80%;
   word-wrap: break-word;
   position: absolute;
+  color: #fff;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-.reason-block .item .reason-card .back,
-.reason-block .item .reason-card .front {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.reason-block .item .reason-card .font {
-  z-index: 2;
-  transform: rotateY(0deg);
 }
 .reason-block .item .reason-card .content {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotateY(0deg);
   width: 100%;
 }
 .reason-block .item .reason-card .content img {
@@ -1664,7 +1677,7 @@ footer .copyrights p a {
   margin-bottom: 30px;
 }
 .text-container a {
-  color: #9FA3AF;
+  color: #034EA1;
 }
 .text-container img {
   width: auto;
@@ -1810,6 +1823,9 @@ footer .copyrights p a {
 .hero-block.contacts {
   height: 50vh;
 }
+.hero-block.contacts .hero-bottom-text {
+  border: none;
+}
 .small-container {
   width: 1200px;
   margin: 0 auto;
@@ -1837,7 +1853,11 @@ footer .copyrights p a {
   width: 88%;
 }
 .contacts .item p a {
+  text-decoration: underline;
   color: #9FA3B0;
+}
+.contacts .item p a:hover {
+  text-decoration: none;
 }
 #map {
   height: 735px;
@@ -2201,6 +2221,7 @@ a:focus {
   position: absolute;
   width: 320px;
   text-align: center;
+  z-index: 0;
 }
 #svgWrapper .career-text:first-child {
   top: 102%;
@@ -2208,7 +2229,7 @@ a:focus {
 #svgWrapper .career-text:first-child p {
   display: block;
 }
-#svgWrapper .career-text span {
+#svgWrapper .career-text a {
   font-size: 23px;
   font-family: Nova;
   font-weight: 800;
@@ -2482,6 +2503,9 @@ a:focus {
   border-color: #034EA1;
   background-color: #fff;
 }
+.mobile-arrow {
+  display: none;
+}
 .st0 {
   fill: none;
   stroke: #FAA61A;
@@ -2639,7 +2663,7 @@ a:focus {
     margin-right: 75px;
   }
   .svg-walk-path {
-    margin: 160px 0px;
+    margin: 220px 0px;
   }
   .svg-walk-path svg {
     width: 95%;
@@ -2771,6 +2795,14 @@ a:focus {
   .hobbies-articles .hobby-specials .item {
     margin-bottom: 30px;
     width: 100%;
+    padding: 40px 0px;
+  }
+  .hobbies-articles .hobby-specials .item h2,
+  .hobbies-articles .hobby-specials .item p {
+    padding: 0px 20px;
+  }
+  .hobbies-articles .hobby-specials .item .line {
+    margin-left: 20px;
   }
   .study-articles .row .item {
     margin-bottom: 30px;
@@ -2873,6 +2905,16 @@ a:focus {
   footer .socials ul {
     padding-left: 0px;
   }
+  header .logo img {
+    width: 30%;
+  }
+  .hero-block .hero-bottom-text .breadcrumb li.active h1 {
+    margin-top: 15px;
+    font-size: 44px;
+  }
+  .hero-block .hero-bottom-text .breadcrumb {
+    margin-bottom: 20px;
+  }
   .way-blocks-wrapper {
     height: auto;
     flex-wrap: wrap;
@@ -2885,7 +2927,7 @@ a:focus {
   }
   .way-blocks-wrapper .item {
     width: 100%;
-    height: 300px;
+    height: 335px;
   }
   .way-blocks-wrapper .item .img-block {
     width: 100%;
@@ -2927,6 +2969,9 @@ a:focus {
   }
   .main-vacancy .item .content .text .name {
     font-size: 1.5vw;
+  }
+  .way-blocks-wrapper .item .text-block {
+    top: 55%;
   }
   .way-blocks-wrapper .item .text-block h2 {
     font-size: 3.15vw;
@@ -3059,6 +3104,9 @@ a:focus {
   }
   .study-articles .row .item .text p {
     font-size: 22px;
+  }
+  header .phone a {
+    font-size: 20px;
   }
 }
 @media (max-width: 469px) {
@@ -3250,8 +3298,11 @@ a:focus {
     font-size: 6.5vw;
   }
   .hobbies-articles .hobbies .item .img-block {
-    height: 75%;
+    height: 58%;
     width: 100%;
+  }
+  .hobbies-articles .hobbies .item .text span {
+    margin-bottom: 10px;
   }
   .hobbies-articles .hobbies .item .text {
     padding: 20px;
@@ -3328,12 +3379,13 @@ a:focus {
   }
   .mobile-path {
     display: block;
-    height: 1836px;
+    height: 1700px;
   }
   .mobile-path svg {
     height: 100%;
     width: 10%;
     margin: 0px;
+    margin-left: 10px;
   }
   .svg-walk-path {
     margin-top: 100px;
@@ -3409,5 +3461,59 @@ a:focus {
   }
   .study-articles .row .item .text p {
     font-size: 18px;
+  }
+  .hero-block.contacts {
+    height: 35vh;
+  }
+  .hero-block.contacts .breadcrumb {
+    margin-bottom: 0px;
+  }
+  .contacts .item img {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+  }
+  .contacts .item .info {
+    display: inline-block;
+    width: 80%;
+  }
+  .contacts .item p {
+    width: 100%;
+  }
+  .contacts .col-xs-12:last-child .item {
+    margin-bottom: 0px;
+  }
+  .news-block .item .half {
+    height: 370px;
+  }
+  #svgWrapper p {
+    width: 88%;
+  }
+  #svgWrapper {
+    min-height: 620px;
+  }
+  .mobile-arrow {
+    display: block;
+    top: 0px;
+    display: inline-block;
+  }
+  .mobile-arrow p {
+    display: inline;
+    padding-right: 20px;
+    color: #9FA3AF;
+    font-size: 18px;
+  }
+  .mobile-arrow img {
+    width: 35px;
+    display: inline;
+    animation: fade 1.5s infinite;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

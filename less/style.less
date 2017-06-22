@@ -21,7 +21,7 @@ body{
 // modals
 
 .modal-window{
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	height: 100%;
 	z-index: 2;
@@ -567,11 +567,18 @@ header{
 	}
 	.item{
 		perspective: 1000px;
+		transform-style: preserve-3d;
 		&:hover{
 			.reason-card{
-				transform: rotateY(180deg);
+				.back{
+					transform: rotateY(0deg);
+				}
+				.front{
+					transform: translate(-50%,-50%) rotateY(180deg);
+				}
 			}
 		}
+
 		&:nth-child(2){
 			.back{
 				background-color: #3e8ecc;
@@ -604,15 +611,31 @@ header{
 			height: 282px;
 			border: 2px solid #DFE1EF;
 			position: relative;
+			cursor: pointer;
 			transition: 0.6s;
 			transform-style: preserve-3d;
-			cursor: pointer;
+/* 			.back, .front{
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+} */
+			.front, .back {
+				backface-visibility: hidden;
+				transition: 0.6s;
+				transform-style: preserve-3d;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.front{
+				z-index: 2;
+			}
 			.back{
 				width: 100%;
 				height: 100%;
 				padding: 50px;
 				position: absolute;
-				transform: rotateY(180deg);
+			    transform: rotateY(-180deg);
 				span{
 					font-size: 20px;
 					font-family: Nova;
@@ -622,24 +645,17 @@ header{
 				    width: 80%;
     				word-wrap: break-word;
 				    position: absolute;
+				    color: #fff;
 				    left: 50%;
 				    top: 50%;
 				    transform: translate(-50%, -50%);
 				}
 			}
-			.back, .front{
-				-webkit-backface-visibility: hidden;
-				backface-visibility: hidden;
-			}
-			.font{
-				z-index: 2;
-				transform: rotateY(0deg);
-			}
 			.content{
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				transform: translate(-50%,-50%);
+				transform: translate(-50%,-50%) rotateY(0deg);
 				width: 100%;
 				img{
 					max-height: 102px;
@@ -1790,7 +1806,7 @@ footer{
 		margin-bottom: 30px;
 	}
 	a{
-		color: @blue-gray;
+		color: @dark-blue;
 	}
 	img{
 		width: auto;
@@ -1957,6 +1973,9 @@ footer{
 
 .hero-block.contacts{
 	height: 50vh;
+	.hero-bottom-text{
+		border: none;
+	}
 }
 
 .small-container{
@@ -1988,7 +2007,11 @@ footer{
 			line-height: 150%;
 			width: 88%;
 			a{
+				text-decoration: underline;
 				color: @gray-lighter;
+				&:hover{
+					text-decoration: none;
+				}
 			}
 		}
 	}
@@ -2372,13 +2395,14 @@ a:focus {
 		position: absolute;
 		width: 320px;
 		text-align: center;
+		z-index: 0;
 		&:first-child{
 			top: 102%;
 			p{
 				display: block;
 			}
 		}
-		span{
+		a{
 			font-size: 23px;
 			font-family: Nova;
 			font-weight: 800;
@@ -2661,7 +2685,9 @@ a:focus {
 		}
 	}
 }
-
+.mobile-arrow{
+	display: none;
+}
 
 .st0{fill:none;stroke:#FAA61A;stroke-width:10;}
 .st1{opacity:0.3;fill:none;stroke:#0C4DA2;stroke-width:2;enable-background:new;}
@@ -2792,7 +2818,7 @@ a:focus {
 		margin-right: 75px;
 	}
 	.svg-walk-path{
-		margin: 160px 0px;
+		margin: 220px 0px;
 		svg{
 			width: 95%;
 		}
@@ -2927,6 +2953,13 @@ a:focus {
 	.hobbies-articles .hobby-specials .item{
 		margin-bottom: 30px;
 		width: 100%;
+		padding: 40px 0px;
+	}
+	.hobbies-articles .hobby-specials .item h2, .hobbies-articles .hobby-specials .item p{
+		padding: 0px 20px;
+	}
+	.hobbies-articles .hobby-specials .item .line{
+		margin-left: 20px;
 	}
 	.study-articles .row .item{
 		margin-bottom: 30px;
@@ -3029,6 +3062,16 @@ a:focus {
 	footer .socials ul{
 		padding-left: 0px;
 	}
+	header .logo img{
+		width: 30%;
+	}
+	.hero-block .hero-bottom-text .breadcrumb li.active h1{
+		margin-top: 15px;
+		font-size: 44px;
+	}
+	.hero-block .hero-bottom-text .breadcrumb{
+		margin-bottom: 20px;
+	}
 	.way-blocks-wrapper{
 		height: auto;
 		flex-wrap: wrap;
@@ -3041,7 +3084,7 @@ a:focus {
 	}
 	.way-blocks-wrapper .item{
 		width: 100%;
-		height: 300px;
+		height: 335px;
 	}
 	.way-blocks-wrapper .item .img-block{
 		width: 100%;
@@ -3083,6 +3126,9 @@ a:focus {
 	}
 	.main-vacancy .item .content .text .name{
 		font-size: 1.5vw;
+	}
+	.way-blocks-wrapper .item .text-block{
+		top: 55%;
 	}
 	.way-blocks-wrapper .item .text-block h2{
 	    font-size: 3.15vw;
@@ -3216,7 +3262,12 @@ a:focus {
 	.study-articles .row .item .text p{
 		font-size: 22px;
 	}
+	header .phone a{
+		font-size: 20px;
+	}
 }
+
+
 
 @media (max-width: 469px){
 	header{
@@ -3405,8 +3456,11 @@ a:focus {
 		font-size: 6.5vw;
 	}
 	.hobbies-articles .hobbies .item .img-block{
-		height: 75%;
+		height: 58%;
 		width: 100%;
+	}
+	.hobbies-articles .hobbies .item .text span{
+		margin-bottom: 10px;
 	}
 	.hobbies-articles .hobbies .item .text{
 		padding: 20px;
@@ -3483,11 +3537,12 @@ a:focus {
 	}
 	.mobile-path{
 		display: block;
-		height: 1836px;
+		height: 1700px;
 		svg{
 			height: 100%;
 			width: 10%;
 			margin: 0px;
+			margin-left: 10px;
 		}
 	}
 	.svg-walk-path {
@@ -3564,5 +3619,64 @@ a:focus {
 	}
 	.study-articles .row .item .text p{
 		font-size: 18px;
+	}
+
+	.hero-block.contacts{
+		height: 35vh;
+	}
+	.hero-block.contacts .breadcrumb{
+		margin-bottom: 0px;
+	}
+	.contacts .item img{
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 20px;
+
+	}
+	.contacts .item .info{
+		display: inline-block;
+		width: 80%;
+	}
+	.contacts .item p{
+		width: 100%;
+	}
+	.contacts .col-xs-12:last-child .item{
+		margin-bottom: 0px;
+	}
+	.news-block .item .half{
+		height: 370px;
+	}
+	#svgWrapper p{
+		width: 88%;
+	}
+	#svgWrapper{
+		min-height: 620px;
+	}
+	.mobile-arrow{
+		display: block;
+		top: 0px;
+		display: inline-block;
+		// position: absolute;
+		p{
+			display: inline;
+			padding-right: 20px;
+			color: #9FA3AF;
+			font-size: 18px;
+		}
+		img{
+			width: 35px;
+			display: inline;
+			animation: fade 1.5s infinite;
+		}
+	}
+	
+}
+
+@keyframes fade{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
 	}
 }
