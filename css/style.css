@@ -270,7 +270,7 @@ header .phone a span {
   top: 50%;
 }
 .way-blocks-wrapper .item:nth-child(2) .text-block {
-  transform: skew(5deg) translate(-50%, -50%);
+  transform: skew(5deg) translate(-47%, -50%);
 }
 .way-blocks-wrapper .item:nth-child(3) .img-block {
   left: 50%;
@@ -289,8 +289,14 @@ header .phone a span {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 78%;
+  height: 52%;
+  padding: 40px;
+  border: 2px solid transparent;
   transform: translate(-50%, -50%);
   color: #fff;
+  transition: all .35s;
+  background-color: transparent;
 }
 .way-blocks-wrapper .item .text-block span {
   font-size: 18px;
@@ -315,11 +321,21 @@ header .phone a span {
   font-family: Raleway;
   font-weight: 800;
   letter-spacing: 2px;
-  font-size: 2.45vw;
+  font-size: 2.25vw;
 }
-.way-blocks-wrapper .item .text-block .more {
+.way-blocks-wrapper .item .text-block .hover-visible {
   opacity: 0;
   transform: translateY(-30px);
+  text-align: center;
+  max-height: 0px;
+  transition: all .35s .05s;
+}
+.way-blocks-wrapper .item .text-block .hover-visible p {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.way-blocks-wrapper .item .text-block .more {
+  opacity: 1;
   transition: all .35s ease;
   text-transform: uppercase;
   font-size: 12px;
@@ -328,7 +344,11 @@ header .phone a span {
   border: 1px solid #fff;
   display: inline-block;
 }
-.way-blocks-wrapper .item:hover .text-block .more {
+.way-blocks-wrapper .item:hover .text-block {
+  border-color: #fff;
+}
+.way-blocks-wrapper .item:hover .text-block .hover-visible {
+  max-height: 300px;
   opacity: 1;
   transform: translateY(20px);
 }
