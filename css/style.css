@@ -1128,7 +1128,7 @@ header .phone a span {
   color: #fff;
 }
 .life-tab .new {
-  height: 590px;
+  height: 500px;
   margin-bottom: 30px;
   display: block;
   position: relative;
@@ -1696,7 +1696,7 @@ footer .copyrights p a {
   margin-bottom: 30px;
 }
 .text-container a {
-  color: #034EA1;
+  color: #0089dc;
 }
 .text-container img {
   width: auto;
@@ -2076,7 +2076,7 @@ footer .copyrights p a {
 }
 .about-slider .about-value {
   padding: 0px 3%;
-  padding-top: 200px;
+  padding-top: 160px;
 }
 .about-slider .about-value .subtext {
   width: 50%;
@@ -2111,7 +2111,7 @@ footer .copyrights p a {
 }
 .about-slider .about-achivements {
   padding: 0px 3%;
-  padding-top: 200px;
+  padding-top: 160px;
 }
 .about-slider .about-achivements .row {
   display: flex;
@@ -2132,7 +2132,7 @@ footer .copyrights p a {
 }
 .about-slider .about-achivements p {
   font-family: Nova;
-  font-size: 32px;
+  font-size: 1.68vw;
   color: #fff;
   line-height: 135%;
   width: 100%;
