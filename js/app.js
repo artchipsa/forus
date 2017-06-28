@@ -275,7 +275,7 @@ $(document).ready(function(){
 				var move_count = ev.gesture.deltaX * (-1);
 				move = move_start + move_count;
 
-				if 	(move > 400 && $(window).width() < 601){
+				if 	(move > 800 && $(window).width() < 601){
 					$('.pan-hide').css('opacity', 0)
 					console.log(1)
 				} else {
