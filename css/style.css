@@ -3235,6 +3235,9 @@ a:focus {
     font-size: 16px;
     padding: 0px 14px 12px 0px;
   }
+  .pan-hide {
+    transition: all .35s;
+  }
 }
 @media (max-width: 469px) {
   header {
