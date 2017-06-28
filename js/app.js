@@ -270,11 +270,17 @@ $(document).ready(function(){
 				matrix = matrix[4];
 				move_start = parseInt(matrix, 10);
 				move_start = Math.abs(move_start);
-				console.log("move_start", move_start);
 			})
 			svgPan.hammer().bind("pan", function(ev){
 				var move_count = ev.gesture.deltaX * (-1);
 				move = move_start + move_count;
+
+				if 	(move > 400 && $(window).width() < 601){
+					$('.pan-hide').css('opacity', 0)
+					console.log(1)
+				} else {
+					$('.pan-hide').css('opacity', 1)
+				}
 				if (move >= stop){
 					svgPan.css({transform: 'translateX(-'+stop+'px)'});	
 				} else {
