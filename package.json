@@ -1,12 +1,13 @@
 {
-  "name": "webpack-tutorial",
+  "name": "binar",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack app.js build.js --watch"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
@@ -18,9 +19,6 @@
     "gulp-watch": "^4.3.11",
     "path": "^0.12.7",
     "svgmin": "^0.1.0",
-    "svgstore": "^2.0.2",
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "svgstore": "^2.0.2"
+  }
 }

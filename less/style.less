@@ -572,18 +572,6 @@ header{
 	.title{
 		font-size: 36px;
 	}
-	&.no-rotate{
-		.reason-card{
-			cursor: default;
-		}
-		.item{
-			&:hover{
-				.reason-card{
-					transform: rotate(0deg);
-				}
-			}
-		}
-	}
 	.item{
 		perspective: 1000px;
 		transform-style: preserve-3d;
@@ -593,7 +581,7 @@ header{
 					transform: rotateY(0deg);
 				}
 				.front{
-					transform: translate(-50%,-50%) rotateY(180deg);
+					transform: translate(-50%,-50%) rotateY(-180deg);
 				}
 			}
 		}
@@ -689,6 +677,24 @@ header{
 					line-height: 120%;
 					display: inline-block;
 					width: 80%;
+				}
+			}
+		}
+	}
+	&.no-rotate{
+		.reason-card{
+			cursor: default;
+		}
+		.item{
+			&:hover{
+				.reason-card{
+					transform: rotate(0deg);
+					.back{
+						transform: rotateY(-180deg);
+					}
+					.front{
+						transform: translate(-50%,-50%) rotateY(0deg);
+					}
 				}
 			}
 		}
@@ -2398,7 +2404,8 @@ a:focus {
 	.svg-container{
 		position: relative;
 		transform: translateX(0px);
-		cursor: url(../img/Cursor.svg) 19 5, auto;
+		cursor: move;
+		cursor: url(../img/Cursor.svg) 19 5, move;
 	}
 	svg{
 		overflow: visible;
@@ -2715,6 +2722,7 @@ a:focus {
 @media (max-width: 1367px){
 	.title{
 		font-size: 36px;
+
 	}
 	.reason-block .item .reason-card .content{
 		width: 75%;
@@ -2844,8 +2852,9 @@ a:focus {
 	.fail-block{
 		padding-top: 150px;
 	}
-	.title{
-		word-break: break-word;
+	.no-rotate .title{
+		word-break: break-all;
+		display: inline-block;
 	}
 	.vacancy-info-block .item .img-block{
 		min-height: 340px;
@@ -2865,9 +2874,36 @@ a:focus {
 	.about-slider .about-value .subtext{
 		width: 80%;
 	}
+	.way-blocks-wrapper .item .text-block{
+		height: auto;
+		padding-top: 20px;
+	}
+	.way-blocks-wrapper .item .text-block span{
+		padding-bottom: 25px;
+		margin-bottom: 25px;
+	}
+	.way-blocks-wrapper .item .text-block h2{
+		font-size: 1.95vw;
+	}
+	.way-blocks-wrapper .item:hover .text-block .hover-visible{
+	    transform: translateY(10px);
+	}
+	header .logo img{
+		width: 18%;
+	}
+	.main-vacancy a.item{
+		padding: 14px 2%;
+	}
+	.career-bottom-block .col-xs-12 .item .text p{
+		font-size: 16px;
+	}
 }
 
 @media (max-width: 1025px){
+	.no-rotate .title{
+		word-break: break-word;
+		display: block;
+	}
 	.way-blocks-wrapper .item:nth-child(2) .img-block{
 		width: 135%;
 	}
@@ -3283,9 +3319,79 @@ a:focus {
 	header .phone a{
 		font-size: 20px;
 	}
+	.way-blocks-wrapper .item:hover .text-block .hover-visible{
+	    max-height: 0px;
+    	opacity: 0;
+	}
+	.way-blocks-wrapper .item .text-block{
+		width: auto;
+	}
 }
 
-
+@media(max-width: 650px){
+	.menu a p{
+		font-size: 17px;
+	}
+	header .phone a{
+		font-size: 17px;
+	}
+	.reason-block .item .reason-card .back span{
+	    padding: 0px 10%;
+	}
+	.vacancy-info-block .item .img-block{
+		min-height: 1px;
+	}
+	.news-header, .moments-header, .photo-header{
+		height: auto;
+	}
+	.study-articles .row .item{
+		height: 375px;
+	}
+	.hobbies-articles .hobbies .item .text p{
+	    font-size: 14px;
+    	color: #fff;
+	}
+	#svgWrapper .career-text a{
+		margin-bottom: 0px;
+	}
+	#svgWrapper .career-text p{
+		font-size: 13px;
+	}
+	#svgWrapper .career-text:first-child{
+		top: 98%;
+	}
+	.career-bottom-block .col-xs-12 .item img{
+		height: 350px;
+	}
+	.career-bottom-block .col-xs-12 .item .text p{
+		font-size: 14px;
+	}
+	.hero-block.text-page .hero-bottom-text .breadcrumb li.active h1{
+		font-size: 20px;
+	}
+	.hero-block.no-img .hero-bottom-text .breadcrumb li.active .line{
+		margin-bottom: 12px;
+	}
+	.hero-block.text-page .hero-bottom-text .breadcrumb li.active span{
+		margin-bottom: 12px;
+	}
+	.hero-block.text-page .hero-bottom-text .breadcrumb li.active{
+		margin-top: 12px;
+	}
+	.hero-block .hero-bottom-text .breadcrumb{
+		margin-bottom: 0px;
+	}
+	.hero-block.no-img .hero-bottom-text .breadcrumb{
+		margin-bottom: 20px;
+	}
+	.text-container table{
+		table-layout: auto;
+	}
+	.career-block .vacancy-city-switch li a{
+		font-size: 16px;
+	    padding: 0px 14px 12px 0px;
+	}
+}
 
 @media (max-width: 469px){
 	header{
@@ -3687,6 +3793,7 @@ a:focus {
 			animation: fade 1.5s infinite;
 		}
 	}
+	
 	
 }
 

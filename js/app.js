@@ -230,7 +230,7 @@ $(document).ready(function(){
 			$('.point:visible').each(function(){
 				var id = $(this).data('id');
 				console.log("id", id);
-				var y = $(this).offset().top + 40;
+				var y = $(this).offset().top + 20;
 				var x = $(this).offset().left - ($('#svgWrapper .career-text').width()/2);				
 				$('#svgWrapper .svg-container').append('<div class="career-text generated" style="left:'+x+'px;">'+
 				'<a href="#">Консультант</a>'+
