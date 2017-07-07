@@ -1263,8 +1263,9 @@ footer .footer-links li a {
 }
 footer .socials span {
   font-size: 18px;
-  color: #A5A5A5;
+  color: #222;
   display: inline-block;
+  margin-bottom: 20px;
 }
 footer .socials ul {
   display: inline-flex;
@@ -1693,7 +1694,7 @@ footer .copyrights p a {
   font-size: 23px;
   font-family: Nova;
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-top: 0px;
 }
 .text-container p {
@@ -1758,10 +1759,12 @@ footer .copyrights p a {
   color: #9FA3AF;
 }
 .text-container ul {
+  margin-top: -20px;
+  margin-bottom: 30px;
   padding-left: 30px;
 }
 .text-container ul li {
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   font-size: 16px;
 }
 .text-container .reccom {
@@ -2742,6 +2745,24 @@ a:focus {
   .career-bottom-block .col-xs-12 .item .text p {
     font-size: 16px;
   }
+  .main-vacancy .item .content .text .name {
+    font-size: 12px;
+  }
+  .way-blocks-wrapper .item .text-block .hover-visible p {
+    font-size: 14px;
+  }
+  .way-blocks-wrapper .item .text-block span {
+    font-size: 16px;
+  }
+  .way-blocks-wrapper .item:nth-child(2) .text-block {
+    transform: skew(5deg) translate(-47%, -43%);
+  }
+  .way-blocks-wrapper .item .text-block {
+    transform: translate(-50%, -43%);
+  }
+  .modal-window.menu-modal {
+    padding-top: 110px;
+  }
 }
 @media (max-width: 1025px) {
   .no-rotate .title {
@@ -2953,6 +2974,9 @@ a:focus {
   }
   footer .socials ul {
     padding-left: 15px;
+  }
+  .modal-window.menu-modal {
+    padding-top: 150px;
   }
 }
 @media (max-width: 769px) {
@@ -3170,9 +3194,12 @@ a:focus {
     width: auto;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 668px) {
   .menu a p {
     font-size: 17px;
+  }
+  .modal-window.menu-modal {
+    padding-top: 110px;
   }
   header .phone a {
     font-size: 17px;
