@@ -731,18 +731,12 @@ header .phone a span {
   background-color: #2d72a8;
 }
 .vacancy-block .vacancy-items .item {
-  height: 295px;
+  height: 185px;
   border: 2px solid transparent;
   display: block;
   position: relative;
   transition: all .35s;
   margin-bottom: 30px;
-}
-.vacancy-block .vacancy-items .item.open {
-  height: 185px;
-}
-.vacancy-block .vacancy-items .item.open span {
-  font-size: 23px;
 }
 .vacancy-block .vacancy-items .item.active {
   background-color: #fff !important;
@@ -756,13 +750,13 @@ header .phone a span {
 }
 .vacancy-block .vacancy-items .item span {
   font-family: Nova;
-  font-size: 32px;
   color: #fff;
   line-height: 120%;
   position: absolute;
   top: 38%;
   left: 30px;
   transition: all .35s;
+  font-size: 23px;
 }
 .vacancy-block .vacancy-city-content .section {
   display: none;
@@ -2097,10 +2091,46 @@ footer .copyrights p a {
 .about-slider .about-value .value-container {
   display: flex;
   flex-wrap: wrap;
+  perspective: 1000px;
+  transform-style: preserve-3d;
 }
 .about-slider .about-value .value-item {
   width: 15%;
+  height: 286px;
   margin-right: 4%;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  border: 2px solid #fff;
+  transform-origin: center center;
+  text-align: center;
+}
+.about-slider .about-value .value-item:hover .back {
+  transform: rotateY(0deg);
+}
+.about-slider .about-value .value-item:hover .front {
+  transform: rotateY(180deg) translate(-50%, -50%);
+}
+.about-slider .about-value .value-item .front,
+.about-slider .about-value .value-item .back {
+  backface-visibility: hidden;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.about-slider .about-value .value-item .front {
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: rotateY(0deg) translate(-50%, -50%);
+}
+.about-slider .about-value .value-item .back {
+  transform: rotateY(-180deg);
+  width: 100%;
+  height: 100%;
+  padding: 10%;
 }
 .about-slider .about-value .value-item:last-child {
   margin-right: 0px;
@@ -2111,7 +2141,6 @@ footer .copyrights p a {
   font-weight: 800;
   color: #fff;
   line-height: 130%;
-  margin-bottom: 30px;
 }
 .about-slider .about-value .value-item .text {
   font-size: 14px;
@@ -2763,6 +2792,9 @@ a:focus {
   .modal-window.menu-modal {
     padding-top: 110px;
   }
+  .about-slider .about-value .value-item .back {
+    padding: 5%;
+  }
 }
 @media (max-width: 1025px) {
   .no-rotate .title {
@@ -2978,10 +3010,19 @@ a:focus {
   .modal-window.menu-modal {
     padding-top: 150px;
   }
+  .about-slider .about-value .value-item .front {
+    width: 80%;
+  }
+  .about-slider .about-value .value-item {
+    height: 350px;
+  }
 }
 @media (max-width: 769px) {
   footer .socials ul {
     padding-left: 0px;
+  }
+  .about-slider .about-value .value-item {
+    height: 175px;
   }
   header .logo img {
     width: 30%;
@@ -3264,6 +3305,9 @@ a:focus {
   }
   .pan-hide {
     transition: all .35s;
+  }
+  .about-slider .about-value .value-item {
+    height: 205px;
   }
 }
 @media (max-width: 469px) {

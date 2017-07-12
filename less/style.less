@@ -791,16 +791,15 @@ header{
 			}
 		}
 		.item{
-			height: 295px;
+			// height: 295px;
+			height: 185px;	
 			border: 2px solid transparent;
 			display: block;
 			position: relative;
 			transition: all .35s;
 			margin-bottom: 30px;
 			&.open{
-				height: 185px;
 				span{
-					font-size: 23px;
 				}
 			}
 			&.active{
@@ -815,13 +814,14 @@ header{
 			}
 			span{
 				font-family: Nova;
-				font-size: 32px;
+				// font-size: 32px;
 				color: @white;
 				line-height: 120%;
 				position: absolute;
 				top: 38%;
 				left: 30px;
 				transition: all .35s;
+				font-size: 23px;
 			}
 		}
 	}
@@ -2256,10 +2256,47 @@ footer{
 		.value-container{
 			display: flex;
 			flex-wrap: wrap;
+			perspective: 1000px;
+			transform-style: preserve-3d;
 		}
 		.value-item{
 			width: 15%;
+			height: 286px;
 			margin-right: 4%;
+			transition: 0.6s;
+			transform-style: preserve-3d;
+			position: relative;
+			border: 2px solid #fff;
+			transform-origin: center center;
+			text-align: center;
+			&:hover{
+				.back{
+					transform: rotateY(0deg);
+				}
+				.front{
+					transform: rotateY(180deg) translate(-50%, -50%);
+				}
+			}
+			.front, .back {
+				backface-visibility: hidden;
+				transition: 0.6s;
+				transform-style: preserve-3d;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
+			.front {
+				z-index: 2;
+				top: 50%;
+				left: 50%;
+				transform: rotateY(0deg) translate(-50%, -50%);
+			}
+			.back {
+				transform: rotateY(-180deg);
+				width: 100%;
+				height: 100%;
+				padding: 10%;
+			}
 			&:last-child{
 				margin-right: 0px;
 			}
@@ -2269,7 +2306,6 @@ footer{
 				font-weight: 800;
 				color: @white;
 				line-height: 130%;
-				margin-bottom: 30px;
 			}
 			.text{
 				font-size: 14px;
@@ -2918,6 +2954,9 @@ a:focus {
 	.modal-window.menu-modal{
 		padding-top: 110px;
 	}
+	.about-slider .about-value .value-item .back{
+		padding: 5%;
+	}
 }
 
 @media (max-width: 1025px){
@@ -3134,11 +3173,20 @@ a:focus {
 	.modal-window.menu-modal{
 		padding-top: 150px;
 	}
+	.about-slider .about-value .value-item .front{
+		width: 80%;
+	}
+	.about-slider .about-value .value-item{
+		height: 350px;
+	}
 }
 
 @media (max-width: 769px){
 	footer .socials ul{
 		padding-left: 0px;
+	}
+	.about-slider .about-value .value-item{
+		height: 175px;
 	}
 	header .logo img{
 		width: 30%;
@@ -3420,6 +3468,9 @@ a:focus {
 	}
 	.pan-hide{
 		transition: all .35s;
+	}
+	.about-slider .about-value .value-item{
+		height: 205px;
 	}
 }
 
