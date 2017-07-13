@@ -3015,6 +3015,9 @@ a:focus {
     padding-top: 150px;
   }
   .about-slider .about-value .value-item .front {
+    width: 100%;
+  }
+  .about-slider .about-value .value-item .value-title {
     width: 80%;
   }
   .about-slider .about-value .value-item {
