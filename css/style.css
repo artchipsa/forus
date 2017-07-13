@@ -2109,7 +2109,7 @@ footer .copyrights p a {
   transform: rotateY(0deg);
 }
 .about-slider .about-value .value-item:hover .front {
-  transform: rotateY(180deg) translate(-50%, -50%);
+  transform: rotateY(180deg);
 }
 .about-slider .about-value .value-item .front,
 .about-slider .about-value .value-item .back {
@@ -2122,9 +2122,9 @@ footer .copyrights p a {
 }
 .about-slider .about-value .value-item .front {
   z-index: 2;
-  top: 50%;
-  left: 50%;
-  transform: rotateY(0deg) translate(-50%, -50%);
+  transform: rotateY(0deg);
+  width: 100%;
+  height: 100%;
 }
 .about-slider .about-value .value-item .back {
   transform: rotateY(-180deg);
@@ -2141,6 +2141,10 @@ footer .copyrights p a {
   font-weight: 800;
   color: #fff;
   line-height: 130%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .about-slider .about-value .value-item .text {
   font-size: 14px;
