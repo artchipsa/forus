@@ -1228,6 +1228,11 @@ header .phone a span {
   height: 2px;
   background-color: #9FA3B0;
 }
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  border: none;
+}
 footer {
   padding: 42px 40px;
   background-color: #F1F1F1;
